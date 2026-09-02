@@ -988,7 +988,7 @@ svg.lucide {
 html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;ibaloiLearnerBrandedMockup&quot;&gt;
+&lt;div id=&quot;ibaloiLearnerBrandedMockup&quot; class=&quot;is-welcome lang-ibaloi&quot;&gt;
   &lt;style&gt;
     #ibaloiLearnerBrandedMockup {
       --ibm-ink:#181716;
@@ -1036,6 +1036,33 @@ html&gt;body{padding:0}&lt;/style&gt;
     .ibm-langbar button[aria-pressed=&quot;true&quot;] { border-color:var(--ibm-red); background:var(--ibm-red); color:var(--ibm-paper); }
     .ibm-langnote { margin:8px 0 0; padding:7px 9px; border-radius:10px; background:var(--ibm-red-soft); color:var(--ibm-red); font-size:8px; line-height:1.35; }
     .ibm-langnote.ainu { background:var(--ibm-ochre-soft); color:var(--ibm-ink); }
+    #ibaloiLearnerBrandedMockup.is-welcome .ibm-status,
+    #ibaloiLearnerBrandedMockup.is-welcome .ibm-langbar,
+    #ibaloiLearnerBrandedMockup.is-welcome .ibm-langnote,
+    #ibaloiLearnerBrandedMockup.is-welcome .ibm-bottomnav { display:none; }
+    #ibaloiLearnerBrandedMockup.is-welcome .ibm-screen { min-height:675px; padding:0; }
+    #ibaloiLearnerBrandedMockup.is-welcome [data-pane=&quot;welcome&quot;] &gt; :not(.ibm-welcome-minimal) { display:none; }
+    .ibm-welcome-minimal { position:relative; min-height:675px; display:flex; flex-direction:column; justify-content:center; overflow:hidden; padding:34px 24px; background:#210B0B; transition:background .28s ease; }
+    .ibm-welcome-minimal:before { content:&quot;&quot;; position:absolute; inset:0; background-image:url(&quot;assets/ibaloi-textile-placeholder.png&quot;); background-position:center top; background-repeat:repeat; background-size:auto 168px; opacity:.98; }
+    .ibm-welcome-minimal:after { content:&quot;&quot;; position:absolute; inset:0; background:linear-gradient(90deg, rgba(250,247,241,.96) 0 48%, rgba(250,247,241,.78) 68%, rgba(250,247,241,.22) 100%), repeating-linear-gradient(90deg, rgba(250,247,241,.11) 0 1px, transparent 1px 7px), linear-gradient(180deg, rgba(24,23,22,.08), transparent 28%, rgba(24,23,22,.14)); }
+    #ibaloiLearnerBrandedMockup.lang-ainu .ibm-welcome-minimal { background:#0B3F52; }
+    #ibaloiLearnerBrandedMockup.lang-ainu .ibm-welcome-minimal:before { background-image:url(&quot;assets/ainu-textile-placeholder.png&quot;); background-position:center top; background-size:cover; opacity:.9; }
+    #ibaloiLearnerBrandedMockup.lang-ainu .ibm-welcome-minimal:after { background:linear-gradient(90deg, rgba(247,242,232,.96) 0 52%, rgba(247,242,232,.78) 76%, rgba(247,242,232,.42) 100%); }
+    .ibm-welcome-minimal &gt; * { position:relative; z-index:1; }
+    .ibm-welcome-minimal h2 { margin:0; color:var(--ibm-ink); font-size:39px; line-height:1.02; letter-spacing:-.045em; }
+    .ibm-welcome-minimal p { margin:13px 0 0; color:var(--ibm-gray); font-size:18px; line-height:1.32; letter-spacing:-.015em; }
+    .ibm-welcome-minimal .ibm-welcome-invite { margin-top:7px; color:var(--ibm-red); font-size:20px; font-weight:700; }
+    .ibm-language-choices { display:grid; gap:10px; margin-top:31px; }
+    .ibm-langchoice { width:100%; min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:14px; border:1px solid var(--ibm-mist); border-radius:17px; padding:15px 16px; background:var(--ibm-soft); color:var(--ibm-ink); cursor:pointer; text-align:left; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease; }
+    .ibm-langchoice:hover, .ibm-langchoice:focus-visible { border-color:var(--ibm-red); transform:translateY(-1px); box-shadow:0 8px 16px rgba(24,23,22,.08); }
+    .ibm-langchoice[aria-pressed=&quot;true&quot;] { border-color:var(--ibm-red); background:var(--ibm-red-soft); box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--ibm-red) 22%,transparent); }
+    #ibaloiLearnerBrandedMockup.lang-ainu .ibm-langchoice[aria-pressed=&quot;true&quot;] { border-color:#213F72; background:#EEF3FB; box-shadow:inset 0 0 0 2px rgba(33,63,114,.18); }
+    #ibaloiLearnerBrandedMockup.lang-ainu .ibm-welcome-minimal .ibm-welcome-invite,
+    #ibaloiLearnerBrandedMockup.lang-ainu .ibm-langchoice em { color:#213F72; }
+    .ibm-langchoice strong { display:block; font-size:18px; letter-spacing:-.02em; }
+    .ibm-langchoice span { display:block; margin-top:4px; color:var(--ibm-gray); font-size:11px; line-height:1.32; }
+    .ibm-langchoice em { width:34px; height:34px; flex:0 0 34px; display:grid; place-items:center; border-radius:50%; background:var(--ibm-paper); color:var(--ibm-red); font-style:normal; font-size:13px; font-weight:700; }
+    .ibm-welcome-minimal .ibm-action { margin-top:22px; min-height:48px; border-radius:15px; font-size:13px; }
     .ibm-appbar { display:flex; justify-content:space-between; align-items:center; gap:9px; margin:7px 0 15px; }
     .ibm-brand { display:flex; align-items:center; gap:7px; font-size:13px; font-weight:700; letter-spacing:-.02em; }
     .ibm-mark { width:24px; height:24px; display:grid; place-items:center; border-radius:10px; background:var(--ibm-red); color:var(--ibm-paper); font-size:13px; }
@@ -1204,6 +1231,22 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;div class=&quot;ibm-section&quot;&gt;&lt;div class=&quot;ibm-sectionhead&quot;&gt;&lt;h3&gt;Before you begin&lt;/h3&gt;&lt;span&gt;Consent + scope&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ibm-note&quot;&gt;&lt;strong&gt;Greeting placeholder&lt;/strong&gt;&lt;br&gt;Community-approved greeting goes here.&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;ibm-section&quot;&gt;&lt;div class=&quot;ibm-sectionhead&quot;&gt;&lt;h3&gt;Choose your starting point&lt;/h3&gt;&lt;/div&gt;&lt;div class=&quot;ibm-actionrow&quot;&gt;&lt;button class=&quot;ibm-action&quot; type=&quot;button&quot; data-screen=&quot;home&quot;&gt;Continue as learner&lt;/button&gt;&lt;button class=&quot;ibm-action secondary&quot; type=&quot;button&quot; data-screen=&quot;context&quot;&gt;Set my path&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;ibm-section&quot;&gt;&lt;div class=&quot;ibm-note&quot;&gt;&lt;strong&gt;Speakers guide the app.&lt;/strong&gt;&lt;br&gt;AI only helps you practice.&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;ibm-welcome-minimal&quot;&gt;
+            &lt;h2&gt;Welcome Marc!&lt;/h2&gt;
+            &lt;p&gt;Which language do you want to experience today?&lt;/p&gt;
+            &lt;p class=&quot;ibm-welcome-invite&quot; id=&quot;ibmWelcomeInvite&quot;&gt;Tucaljo, iteneng jo so istoria mi!&lt;/p&gt;
+            &lt;div class=&quot;ibm-language-choices&quot; aria-label=&quot;Choose a language&quot;&gt;
+              &lt;button class=&quot;ibm-langchoice&quot; type=&quot;button&quot; data-language=&quot;ibaloi&quot; aria-pressed=&quot;true&quot;&gt;
+                &lt;span&gt;&lt;strong&gt;Ibaloi&lt;/strong&gt;&lt;span&gt;Learn through family, place, and everyday stories.&lt;/span&gt;&lt;/span&gt;
+                &lt;em&gt;Ib&lt;/em&gt;
+              &lt;/button&gt;
+              &lt;button class=&quot;ibm-langchoice&quot; type=&quot;button&quot; data-language=&quot;ainu&quot; aria-pressed=&quot;false&quot;&gt;
+                &lt;span&gt;&lt;strong&gt;Ainu&lt;/strong&gt;&lt;span&gt;Explore after co-design and community approval.&lt;/span&gt;&lt;/span&gt;
+                &lt;em&gt;Ai&lt;/em&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;button class=&quot;ibm-action&quot; type=&quot;button&quot; data-screen=&quot;context&quot;&gt;Continue&lt;/button&gt;
+          &lt;/div&gt;
         &lt;/section&gt;
 
         &lt;section class=&quot;ibm-screen&quot; data-pane=&quot;context&quot; hidden&gt;
@@ -1298,6 +1341,11 @@ html&gt;body{padding:0}&lt;/style&gt;
   const voice = root.querySelector(&#x27;#ibmVoice&#x27;);
   const languageButtons = root.querySelectorAll(&#x27;[data-language]&#x27;);
   const languageNote = root.querySelector(&#x27;#ibmLangNote&#x27;);
+  const welcomeInvite = root.querySelector(&#x27;#ibmWelcomeInvite&#x27;);
+  const inviteCopy = {
+    ibaloi: &#x27;Tucaljo, iteneng jo so istoria mi!&#x27;,
+    ainu: &#x27;Uwepeker nu yan!&#x27;
+  };
   const guideGrid = root.querySelector(&#x27;.ibm-guides&#x27;);
   const guideHeader = guideGrid &amp;&amp; guideGrid.previousElementSibling;
   if (guideHeader) {
@@ -1319,6 +1367,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
   function show(name) {
     const item = labels[name] || labels.welcome;
+    root.classList.toggle(&#x27;is-welcome&#x27;, name === &#x27;welcome&#x27;);
     panes.forEach(pane =&gt; { pane.hidden = pane.dataset.pane !== name; });
     tabs.forEach(tab =&gt; tab.setAttribute(&#x27;aria-selected&#x27;, String(tab.dataset.screen === name)));
     root.querySelectorAll(&#x27;.ibm-bottomnav button&#x27;).forEach(button =&gt; button.classList.toggle(&#x27;is-active&#x27;, button.dataset.screen === name || (name === &#x27;garden&#x27; &amp;&amp; button.dataset.screen === &#x27;garden&#x27;)));
@@ -1331,7 +1380,10 @@ html&gt;body{padding:0}&lt;/style&gt;
     const language = event.target.closest(&#x27;[data-language]&#x27;);
     if (language) {
       const isAinu = language.dataset.language === &#x27;ainu&#x27;;
-      languageButtons.forEach(button =&gt; button.setAttribute(&#x27;aria-pressed&#x27;, String(button === language)));
+      root.classList.toggle(&#x27;lang-ainu&#x27;, isAinu);
+      root.classList.toggle(&#x27;lang-ibaloi&#x27;, !isAinu);
+      languageButtons.forEach(button =&gt; button.setAttribute(&#x27;aria-pressed&#x27;, String(button.dataset.language === language.dataset.language)));
+      if (welcomeInvite) welcomeInvite.textContent = inviteCopy[language.dataset.language] || inviteCopy.ibaloi;
       languageNote.classList.toggle(&#x27;ainu&#x27;, isAinu);
       languageNote.textContent = isAinu ? &#x27;Ainu mode is a co-design placeholder · content is not loaded until Ainu partners approve it.&#x27; : &#x27;Ibaloi-first pilot · community review required&#x27;;
     }
