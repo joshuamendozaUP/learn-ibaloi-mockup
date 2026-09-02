@@ -1,0 +1,17 @@
+{
+  "name": "learn-ibaloi-mockup",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive mockup for a community-governed Ibaloi language learning app.",
+  "scripts": {
+    "serve": "python3 -m http.server 4173"
+  },
+  "keywords": [
+    "ibaloi",
+    "language-learning",
+    "mockup",
+    "rag",
+    "community-governance"
+  ],
+  "license": "UNLICENSED"
+}

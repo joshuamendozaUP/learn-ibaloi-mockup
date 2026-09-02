@@ -1,0 +1,1627 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Ibaloi Wireframes</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Ibaloi Wireframes" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Ibaloi Wireframes&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  display: flex;
+  height: 6px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 6px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;ibaloiWireframes&quot;&gt;
+  &lt;style&gt;
+    #ibaloiWireframes {
+      --iw-ink: #1f2940;
+      --iw-muted: #66718b;
+      --iw-blue: #5f7fe8;
+      --iw-blue-deep: #3c5fcd;
+      --iw-lilac: #9f8fe8;
+      --iw-coral: #ef9b8d;
+      --iw-sand: #f4eadc;
+      --iw-mint: #d9f0e8;
+      --iw-paper: #fffdfb;
+      --iw-line: #d9e0ed;
+      --iw-bg: #eef3f9;
+      --iw-shadow: 0 22px 55px rgba(44, 61, 105, .15);
+      color: var(--iw-ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px;
+      background: radial-gradient(circle at 8% 0%, rgba(159,143,232,.22), transparent 35%), linear-gradient(135deg, #f7fbff 0%, var(--iw-bg) 65%, #fdf8f2 100%);
+      border-radius: 28px;
+      box-sizing: border-box;
+    }
+    #ibaloiWireframes * { box-sizing: border-box; }
+    #ibaloiWireframes button { font: inherit; }
+    .iw-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding: 8px 8px 18px; }
+    .iw-kicker { margin:0 0 5px; color: var(--iw-blue-deep); font-size: 11px; font-weight: 800; letter-spacing:.13em; text-transform:uppercase; }
+    .iw-head h1 { margin:0; font-size: clamp(22px, 3vw, 34px); line-height:1.08; letter-spacing:-.04em; }
+    .iw-head p { margin:9px 0 0; color:var(--iw-muted); font-size:13px; max-width: 610px; line-height:1.45; }
+    .iw-segment { display:flex; background: rgba(255,255,255,.72); border:1px solid rgba(217,224,237,.9); padding:4px; border-radius: 14px; gap:3px; white-space:nowrap; }
+    .iw-segment button, .iw-tabs button { border:0; background:transparent; color:var(--iw-muted); cursor:pointer; border-radius:10px; padding:8px 10px; font-size:12px; font-weight:700; }
+    .iw-segment button[aria-pressed=&quot;true&quot;], .iw-tabs button[aria-pressed=&quot;true&quot;] { background:var(--iw-ink); color:#fff; box-shadow: 0 5px 12px rgba(31,41,64,.18); }
+    .iw-tabs { display:flex; gap:7px; flex-wrap:wrap; padding:7px; border:1px solid rgba(217,224,237,.9); background: rgba(255,255,255,.68); border-radius:16px; margin-bottom:18px; }
+    .iw-tabs button { padding:9px 12px; }
+    .iw-board { display:grid; grid-template-columns: 1fr 1fr; gap:18px; align-items:start; }
+    .iw-panel { min-width:0; }
+    .iw-panel-title { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:0 0 8px; }
+    .iw-panel-title h2 { margin:0; font-size:15px; letter-spacing:-.02em; }
+    .iw-panel-title span { color:var(--iw-muted); font-size:11px; }
+    .iw-device { position:relative; overflow:hidden; min-height: 635px; border: 10px solid #202941; border-radius: 34px; background:var(--iw-paper); box-shadow:var(--iw-shadow); }
+    .iw-device:before { content:&quot;&quot;; position:absolute; top:7px; left:50%; transform:translateX(-50%); width:88px; height:5px; background:#202941; border-radius:99px; z-index:2; }
+    .iw-status { height:31px; padding:12px 19px 0; display:flex; justify-content:space-between; color:#7a8499; font-size:9px; font-weight:800; }
+    .iw-screen { padding:13px 19px 22px; }
+    .iw-topbar { display:flex; justify-content:space-between; align-items:center; margin:8px 0 17px; }
+    .iw-brand { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:850; letter-spacing:-.03em; }
+    .iw-mark { width:24px; height:24px; display:grid; place-items:center; border-radius:9px; color:#fff; background:linear-gradient(135deg,var(--iw-blue),var(--iw-lilac)); font-size:13px; }
+    .iw-avatar { width:28px; height:28px; border-radius:50%; background:var(--iw-sand); display:grid; place-items:center; font-size:13px; }
+    .iw-hero { padding:19px; border-radius:23px; background:linear-gradient(135deg, #6f8cf0 0%, #8a77dc 100%); color:#fff; min-height:164px; position:relative; overflow:hidden; }
+    .iw-hero:after { content:&quot;&quot;; position:absolute; width:168px; height:168px; border-radius:50%; border:1px solid rgba(255,255,255,.26); right:-55px; top:-60px; }
+    .iw-hero h3 { margin:0; font-size:23px; max-width:225px; letter-spacing:-.04em; line-height:1.06; }
+    .iw-hero p { margin:10px 0 0; font-size:11px; line-height:1.42; color:rgba(255,255,255,.85); max-width:248px; }
+    .iw-pill { display:inline-flex; align-items:center; gap:5px; border-radius:99px; padding:5px 8px; font-size:9px; font-weight:800; background:rgba(255,255,255,.19); }
+    .iw-draftflag { margin-left:4px; background:rgba(255,243,223,.95); color:#8e6526; }
+    .iw-ib { display:block; margin-top:4px; color:var(--iw-blue-deep); font-size:9px; font-weight:800; letter-spacing:.01em; }
+    .iw-ib-inline { display:block; margin-top:3px; color:var(--iw-blue-deep); font-size:9px; font-weight:800; letter-spacing:.01em; }
+    .iw-greeting-note { display:block; margin-top:3px; color:var(--iw-muted); font-size:8px; font-weight:500; letter-spacing:0; }
+    .iw-wordmark { margin:3px 0 2px; color:var(--iw-blue-deep); font-size:28px; font-weight:850; letter-spacing:-.05em; }
+    .iw-wordgloss { color:var(--iw-ink); font-size:12px; line-height:1.35; }
+    .iw-wordmeta { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+    .iw-wordmeta span { border:1px solid var(--iw-line); border-radius:99px; padding:4px 7px; color:var(--iw-muted); font-size:8px; }
+    .iw-wordanswer { margin-top:10px; padding:10px; border-radius:12px; background:#eef9f3; border:1px solid #b9e1cf; color:var(--iw-ink); font-size:10px; line-height:1.4; }
+    .iw-wordanswer small { color:#4d806a; font-size:8px; }
+    .iw-wordcard.is-selected { border-color:var(--iw-blue); background:#f1f4ff; }
+    .iw-wordcard .iw-wordterm { display:block; color:var(--iw-blue-deep); font-size:14px; font-weight:850; letter-spacing:-.02em; }
+    .iw-journey { display:grid; grid-template-columns:repeat(4,1fr); gap:5px; margin:17px 0 15px; }
+    .iw-step { padding:9px 5px 7px; border:1px solid var(--iw-line); border-radius:12px; text-align:center; background:#fff; }
+    .iw-step.is-on { border-color:var(--iw-blue); background:#f1f4ff; }
+    .iw-step b { display:block; font-size:9px; }
+    .iw-step small { display:block; margin-top:4px; color:var(--iw-muted); font-size:8px; }
+    .iw-sectionline { display:flex; justify-content:space-between; align-items:baseline; margin:15px 0 8px; }
+    .iw-sectionline h4 { margin:0; font-size:13px; }
+    .iw-link { color:var(--iw-blue-deep); font-size:10px; font-weight:800; }
+    .iw-action-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .iw-action { border:1px solid var(--iw-line); border-radius:16px; background:#fff; padding:12px; text-align:left; cursor:pointer; min-height:80px; }
+    .iw-action:hover { border-color:var(--iw-blue); transform:translateY(-1px); }
+    .iw-action strong { display:block; font-size:11px; margin-top:8px; }
+    .iw-action span { display:block; color:var(--iw-muted); font-size:9px; line-height:1.3; margin-top:3px; }
+    .iw-action .iw-ib { color:var(--iw-blue-deep); }
+    .iw-icon { width:25px; height:25px; display:grid; place-items:center; border-radius:9px; font-size:13px; background:var(--iw-sand); }
+    .iw-icon.blue { background:#e6ebff; } .iw-icon.mint { background:var(--iw-mint); } .iw-icon.coral { background:#ffebe5; }
+    .iw-bottomnav { position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:space-around; padding:10px 8px 12px; border-top:1px solid var(--iw-line); background:rgba(255,253,251,.96); }
+    .iw-bottomnav button { border:0; background:transparent; color:var(--iw-muted); font-size:9px; cursor:pointer; }
+    .iw-bottomnav button.is-active { color:var(--iw-blue-deep); font-weight:850; }
+    .iw-bottomnav em { display:block; font-style:normal; font-size:15px; margin-bottom:2px; }
+    .iw-note { padding:10px 12px; border:1px dashed #b6c1d8; border-radius:12px; color:var(--iw-muted); font-size:10px; line-height:1.4; background:#f8faff; }
+    .iw-chat { height:485px; display:flex; flex-direction:column; }
+    .iw-chathead { display:flex; justify-content:space-between; align-items:center; padding-bottom:12px; border-bottom:1px solid var(--iw-line); }
+    .iw-chathead h3 { margin:0; font-size:17px; }
+    .iw-chathead p { margin:3px 0 0; font-size:10px; color:var(--iw-muted); }
+    .iw-source { border:1px solid #c8d1ec; background:#f5f7ff; color:var(--iw-blue-deep); border-radius:10px; padding:6px 8px; font-size:9px; font-weight:800; cursor:pointer; }
+    .iw-messages { flex:1; overflow:auto; padding:13px 0; }
+    .iw-msg { max-width:88%; padding:10px 11px; border-radius:14px; margin-bottom:9px; font-size:11px; line-height:1.38; }
+    .iw-msg.user { margin-left:auto; background:var(--iw-blue); color:#fff; border-bottom-right-radius:4px; }
+    .iw-msg.ai { background:#f2f4f9; border-bottom-left-radius:4px; }
+    .iw-msg.mentor { background:#fff3df; border:1px solid #f1ddba; border-bottom-left-radius:4px; }
+    .iw-msg small { display:block; margin-top:6px; font-size:8px; color:var(--iw-muted); }
+    .iw-composer { display:flex; gap:7px; border-top:1px solid var(--iw-line); padding-top:10px; }
+    .iw-composer input { flex:1; border:1px solid var(--iw-line); border-radius:12px; padding:10px; font-size:10px; min-width:0; }
+    .iw-primary { border:0; border-radius:12px; padding:9px 11px; background:var(--iw-blue); color:#fff; font-weight:800; cursor:pointer; font-size:10px; }
+    .iw-ghost { border:1px solid var(--iw-line); border-radius:12px; background:#fff; color:var(--iw-ink); padding:8px 10px; font-size:10px; font-weight:800; cursor:pointer; }
+    .iw-info { display:flex; gap:8px; align-items:flex-start; margin-top:10px; }
+    .iw-info span { font-size:10px; line-height:1.38; color:var(--iw-muted); }
+    .iw-sourcebox { display:none; margin-top:8px; padding:10px; border:1px solid #c8d1ec; border-radius:12px; background:#fbfcff; font-size:10px; line-height:1.4; }
+    .iw-sourcebox.is-open { display:block; }
+    .iw-builder { padding:14px; border-radius:18px; border:1px solid var(--iw-line); background:#fff; }
+    .iw-label { display:block; margin:0 0 6px; font-size:9px; font-weight:850; text-transform:uppercase; letter-spacing:.08em; color:var(--iw-muted); }
+    .iw-select, .iw-textarea { width:100%; border:1px solid var(--iw-line); border-radius:11px; padding:10px; color:var(--iw-ink); background:#fbfcff; font:inherit; font-size:11px; }
+    .iw-textarea { height:66px; resize:none; }
+    .iw-correction { margin-top:10px; padding:11px; border-radius:12px; background:#eef9f3; border:1px solid #b9e1cf; font-size:11px; line-height:1.4; }
+    .iw-correction b { color:#217753; }
+    .iw-story { overflow:hidden; border-radius:18px; background:#283b53; color:#fff; }
+    .iw-scene { height:150px; position:relative; background:linear-gradient(160deg,#7d9dce 0%,#d4b78d 58%,#577568 59%,#395b50 100%); }
+    .iw-sun { position:absolute; width:45px; height:45px; border-radius:50%; background:#ffe4a3; right:25px; top:18px; box-shadow:0 0 0 10px rgba(255,228,163,.16); }
+    .iw-mountain { position:absolute; bottom:0; left:0; width:0; height:0; border-left:100px solid transparent; border-right:100px solid transparent; border-bottom:95px solid rgba(52,79,89,.72); }
+    .iw-mountain.two { left:100px; border-left-width:130px; border-right-width:130px; border-bottom-width:70px; opacity:.65; }
+    .iw-storycopy { padding:13px 14px 15px; }
+    .iw-storycopy h3 { margin:0; font-size:16px; }
+    .iw-storycopy p { margin:6px 0 11px; color:rgba(255,255,255,.72); font-size:10px; line-height:1.38; }
+    .iw-storymeta { display:flex; gap:5px; flex-wrap:wrap; }
+    .iw-storymeta span { border:1px solid rgba(255,255,255,.23); border-radius:99px; padding:4px 7px; font-size:8px; color:rgba(255,255,255,.86); }
+    .iw-permission { margin-top:9px; color:#fff0c7; font-size:9px; }
+    .iw-review { border:1px solid var(--iw-line); border-radius:16px; background:#fff; overflow:hidden; }
+    .iw-reviewhead { display:flex; justify-content:space-between; gap:8px; padding:12px; border-bottom:1px solid var(--iw-line); }
+    .iw-reviewhead h3 { margin:0; font-size:13px; }
+    .iw-reviewhead p { margin:3px 0 0; font-size:9px; color:var(--iw-muted); }
+    .iw-statuspill { align-self:start; border-radius:99px; padding:4px 7px; background:#fff3df; color:#9b6a21; font-size:8px; font-weight:850; }
+    .iw-reviewrow { display:grid; grid-template-columns:35px 1fr auto; gap:8px; align-items:center; padding:11px 12px; border-bottom:1px solid #edf0f5; }
+    .iw-reviewrow:last-child { border-bottom:0; }
+    .iw-thumb { width:33px; height:33px; border-radius:10px; background:#e8efff; display:grid; place-items:center; font-size:16px; }
+    .iw-reviewrow strong { display:block; font-size:10px; }
+    .iw-reviewrow small { display:block; color:var(--iw-muted); font-size:8px; margin-top:3px; }
+    .iw-reviewrow button { border:1px solid var(--iw-line); background:#fff; color:var(--iw-blue-deep); border-radius:8px; padding:6px 7px; font-size:8px; font-weight:800; cursor:pointer; }
+    .iw-metric { padding:12px; border-radius:16px; background:#fff; border:1px solid var(--iw-line); }
+    .iw-metric h3 { margin:0; font-size:12px; }
+    .iw-metric p { margin:5px 0 10px; color:var(--iw-muted); font-size:9px; }
+    .iw-bars { display:flex; gap:6px; align-items:end; height:80px; padding:0 5px 2px; border-bottom:1px solid var(--iw-line); }
+    .iw-bar { flex:1; border-radius:6px 6px 0 0; background:linear-gradient(var(--iw-lilac),var(--iw-blue)); min-height:16px; }
+    .iw-axis { display:flex; justify-content:space-between; color:var(--iw-muted); font-size:8px; margin-top:5px; }
+    .iw-axis small { display:block; margin-top:2px; font-size:7px; color:var(--iw-muted); }
+    .iw-foot { color:var(--iw-muted); font-size:10px; line-height:1.45; margin:17px 7px 2px; }
+    .iw-foot b { color:var(--iw-ink); }
+    .iw-hide { display:none !important; }
+    @media (max-width: 820px) {
+      #ibaloiWireframes { border-radius:18px; padding:12px; }
+      .iw-head { flex-direction:column; }
+      .iw-segment { width:100%; }
+      .iw-segment button { flex:1; }
+      .iw-board { grid-template-columns:1fr; }
+      .iw-device { max-width:520px; margin:0 auto; }
+    }
+  &lt;/style&gt;
+
+  &lt;div class=&quot;iw-head&quot;&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;iw-kicker&quot;&gt;Wireframe concept · From Ibaloi to Ainu&lt;/p&gt;
+      &lt;h1&gt;Learn with the language, the people, and the place.&lt;/h1&gt;
+      &lt;p&gt;A research-ready app concept for community-governed language learning: grounded AI for practice, visible sources, human escalation, and carefully permissioned cultural stories.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;iw-segment&quot; aria-label=&quot;Workspace&quot;&gt;
+      &lt;button type=&quot;button&quot; data-view=&quot;learner&quot; aria-pressed=&quot;true&quot;&gt;Learner&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-view=&quot;community&quot; aria-pressed=&quot;false&quot;&gt;Community&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-view=&quot;research&quot; aria-pressed=&quot;false&quot;&gt;Research&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;iw-tabs&quot; aria-label=&quot;Wireframe screens&quot;&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;welcome&quot; aria-pressed=&quot;true&quot;&gt;01 Welcome&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;home&quot; aria-pressed=&quot;false&quot;&gt;02 Home&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;ask&quot; aria-pressed=&quot;false&quot;&gt;03 Ask Ibaloi · ibagga&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;builder&quot; aria-pressed=&quot;false&quot;&gt;04 Sentence Builder&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;story&quot; aria-pressed=&quot;false&quot;&gt;05 Story / AR · istoria&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;mentor&quot; aria-pressed=&quot;false&quot;&gt;06 Mentor&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;review&quot; aria-pressed=&quot;false&quot;&gt;07 Governance&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;research&quot; aria-pressed=&quot;false&quot;&gt;08 Study mode&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-screen=&quot;vocab&quot; aria-pressed=&quot;false&quot;&gt;09 Word Garden / MVP&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;iw-board&quot;&gt;
+    &lt;section class=&quot;iw-panel&quot;&gt;
+      &lt;div class=&quot;iw-panel-title&quot;&gt;&lt;h2 id=&quot;iwScreenTitle&quot;&gt;01 · Welcome / consent&lt;/h2&gt;&lt;span&gt;Mobile-first shell&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;iw-device&quot;&gt;
+        &lt;div class=&quot;iw-status&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;◒ ︎▮&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;iw-screen&quot; data-pane=&quot;welcome&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt; Ibaloi / Ainu&lt;/div&gt;&lt;div class=&quot;iw-avatar&quot;&gt;◌&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-hero&quot;&gt;
+            &lt;span class=&quot;iw-pill&quot;&gt;Community-governed learning&lt;/span&gt;&lt;span class=&quot;iw-pill iw-draftflag&quot;&gt;Guidebook draft · 9 labels&lt;/span&gt;
+            &lt;h3&gt;Start with a word. Stay for the story.&lt;/h3&gt;
+            &lt;p&gt;Practice Ibaloi through trusted language sources, community guidance, and meaningful situations.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;Before you begin&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Why this matters&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-note&quot;&gt;This prototype supplements community teaching. The language, stories, and cultural material shown here are used only with community permission.&lt;br&gt;&lt;strong&gt;Guidebook note:&lt;/strong&gt; “Mapteng nga agsafa!” is a literal “Good morning” in the book and is marked as not actually used. Keep this greeting in draft status until community review.&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;Choose your starting point&lt;/h4&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-action-grid&quot;&gt;
+            &lt;button class=&quot;iw-action&quot; type=&quot;button&quot; data-screen=&quot;home&quot;&gt;&lt;span class=&quot;iw-icon blue&quot;&gt;Aa&lt;/span&gt;&lt;strong&gt;I know a little&lt;/strong&gt;&lt;span&gt;Begin with everyday words.&lt;/span&gt;&lt;/button&gt;
+            &lt;button class=&quot;iw-action&quot; type=&quot;button&quot; data-screen=&quot;mentor&quot;&gt;&lt;span class=&quot;iw-icon mint&quot;&gt;◉&lt;/span&gt;&lt;strong&gt;I want a human guide&lt;/strong&gt;&lt;span&gt;Meet a representative or mentor.&lt;/span&gt;&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;button class=&quot;iw-primary&quot; style=&quot;width:100%;margin-top:13px&quot; type=&quot;button&quot; data-screen=&quot;home&quot;&gt;Continue as a learner&lt;/button&gt;
+          &lt;div class=&quot;iw-info&quot;&gt;&lt;span&gt;◐&lt;/span&gt;&lt;span&gt;English · Ibaloi first. Ainu adaptation is co-designed separately with Ainu partners.&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;home&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt;&lt;div&gt;&lt;div&gt;Mapteng nga agsafa, Marc&lt;/div&gt;&lt;span class=&quot;iw-greeting-note&quot;&gt;Good morning · guidebook draft&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;iw-avatar&quot;&gt;M&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-hero&quot;&gt;&lt;span class=&quot;iw-pill&quot;&gt;Practice rhythm · 3 days&lt;/span&gt;&lt;h3&gt;One phrase. One story. One connection.&lt;/h3&gt;&lt;p&gt;A short practice now can become a conversation later.&lt;/p&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-journey&quot;&gt;&lt;div class=&quot;iw-step is-on&quot;&gt;&lt;b&gt;eguatan&lt;/b&gt;&lt;small&gt;understand · 6 / 8&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;iw-step is-on&quot;&gt;&lt;b&gt;CONSTRUCT&lt;/b&gt;&lt;small&gt;3 / 5&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;iw-step&quot;&gt;&lt;b&gt;EXPERIENCE&lt;/b&gt;&lt;small&gt;1 story&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;iw-step&quot;&gt;&lt;b&gt;esel&lt;/b&gt;&lt;small&gt;speak · next&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;Today’s path&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Not a score&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-action-grid&quot;&gt;&lt;button class=&quot;iw-action&quot; type=&quot;button&quot; data-screen=&quot;vocab&quot;&gt;&lt;span class=&quot;iw-icon blue&quot;&gt;Aa&lt;/span&gt;&lt;strong&gt;Practice words&lt;/strong&gt;&lt;span class=&quot;iw-ib&quot;&gt;Word Garden · 3 to revisit&lt;/span&gt;&lt;span&gt;eguatan · esel · iteneng&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;iw-action&quot; type=&quot;button&quot; data-screen=&quot;ask&quot;&gt;&lt;span class=&quot;iw-icon blue&quot;&gt;⌕&lt;/span&gt;&lt;strong&gt;Ask Ibaloi&lt;/strong&gt;&lt;span class=&quot;iw-ib&quot;&gt;ibagga · ask · draft&lt;/span&gt;&lt;span&gt;“How do I greet an elder?”&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;iw-action&quot; type=&quot;button&quot; data-screen=&quot;builder&quot;&gt;&lt;span class=&quot;iw-icon mint&quot;&gt;✎&lt;/span&gt;&lt;strong&gt;Build a sentence&lt;/strong&gt;&lt;span&gt;Practice a validated phrase.&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;iw-action&quot; type=&quot;button&quot; data-screen=&quot;story&quot;&gt;&lt;span class=&quot;iw-icon coral&quot;&gt;◒&lt;/span&gt;&lt;strong&gt;Enter a story&lt;/strong&gt;&lt;span class=&quot;iw-ib&quot;&gt;istoria · story · draft&lt;/span&gt;&lt;span&gt;Upper Loakan · approved&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;iw-action&quot; type=&quot;button&quot; data-screen=&quot;mentor&quot;&gt;&lt;span class=&quot;iw-icon&quot;&gt;◉&lt;/span&gt;&lt;strong&gt;Ask a mentor&lt;/strong&gt;&lt;span&gt;2 community replies&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;Today’s gentle nudge&lt;/h4&gt;&lt;/div&gt;&lt;div class=&quot;iw-note&quot;&gt;Try one phrase aloud, then tell the app what felt easy or difficult. Your reflection is private unless you consent to share it for the study.&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;ask&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt;&lt;div&gt;&lt;div&gt;Ask Ibaloi&lt;/div&gt;&lt;span class=&quot;iw-ib-inline&quot;&gt;ibagga · draft&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;button class=&quot;iw-ghost&quot; type=&quot;button&quot; data-screen=&quot;mentor&quot;&gt;Human help&lt;/button&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-chat&quot;&gt;&lt;div class=&quot;iw-chathead&quot;&gt;&lt;div&gt;&lt;h3&gt;Ask about language in context&lt;/h3&gt;&lt;p&gt;Grounded in approved sources · uncertainty-aware&lt;/p&gt;&lt;/div&gt;&lt;button class=&quot;iw-source&quot; type=&quot;button&quot; id=&quot;iwSourceToggle&quot;&gt;Sources&lt;/button&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-messages&quot;&gt;&lt;div class=&quot;iw-msg user&quot;&gt;What is a respectful way to greet an elder?&lt;small&gt;You · just now&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;iw-msg ai&quot;&gt;&lt;b&gt;Here is one community-validated example:&lt;/b&gt;&lt;br&gt;“[approved phrase]”&lt;br&gt;&lt;br&gt;Use depends on relationship, setting, and locality. I found a validated example from the Kabayan reference set; a Loakan form may differ.&lt;small&gt;AI answer · 2 approved records&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;iw-sourcebox&quot; id=&quot;iwSourceBox&quot;&gt;&lt;b&gt;Trace this answer&lt;/b&gt;&lt;br&gt;Source: community-validated example · Kabayan&lt;br&gt;Validation: reviewed by fluent Ibaloi speaker&lt;br&gt;Permission: Community / Educational&lt;br&gt;Note: This answer does not claim a universal standard.&lt;/div&gt;&lt;div class=&quot;iw-msg ai&quot; style=&quot;background:#fff8ed;border:1px solid #f1dfc3&quot;&gt;&lt;b&gt;Not sure?&lt;/b&gt; I can route this question to an Ibaloi representative instead of guessing.&lt;small&gt;Trust cue · ask for human review&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-composer&quot;&gt;&lt;input aria-label=&quot;Ask Ibaloi&quot; placeholder=&quot;Ask about a word, phrase, or situation…&quot;&gt;&lt;button class=&quot;iw-primary&quot; type=&quot;button&quot; id=&quot;iwSendAsk&quot;&gt;Send&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;builder&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt; Sentence Builder&lt;/div&gt;&lt;span class=&quot;iw-pill&quot; style=&quot;background:#e9edff;color:#4e68c8&quot;&gt;Level 1&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-builder&quot;&gt;&lt;label class=&quot;iw-label&quot; for=&quot;iwSituation&quot;&gt;Situation&lt;/label&gt;&lt;select class=&quot;iw-select&quot; id=&quot;iwSituation&quot;&gt;&lt;option&gt;Talking with family&lt;/option&gt;&lt;option&gt;Meeting an elder&lt;/option&gt;&lt;option&gt;Asking about a place&lt;/option&gt;&lt;/select&gt;&lt;label class=&quot;iw-label&quot; for=&quot;iwSentence&quot; style=&quot;margin-top:13px&quot;&gt;Your sentence&lt;/label&gt;&lt;textarea class=&quot;iw-textarea&quot; id=&quot;iwSentence&quot;&gt;I am going home.&lt;/textarea&gt;&lt;div style=&quot;display:flex;gap:7px;margin-top:9px&quot;&gt;&lt;button class=&quot;iw-primary&quot; type=&quot;button&quot; id=&quot;iwCorrect&quot;&gt;Check my sentence&lt;/button&gt;&lt;button class=&quot;iw-ghost&quot; type=&quot;button&quot;&gt;Hear example&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;iw-correction&quot; id=&quot;iwCorrection&quot;&gt;&lt;b&gt;Grounded suggestion&lt;/b&gt;&lt;br&gt;Try the approved form for this situation. The word order differs from English; here is why…&lt;br&gt;&lt;small style=&quot;color:#4d806a&quot;&gt;Source: validated sentence example · context: family · locality shown on tap&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;What changed?&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Save to practice&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-note&quot;&gt;Explain the correction in one or two lines. Offer alternatives when more than one validated form exists; never silently “standardize” a locality.&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;story&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt;&lt;div&gt;&lt;div&gt;Experience&lt;/div&gt;&lt;span class=&quot;iw-ib-inline&quot;&gt;istoria · story&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;button class=&quot;iw-ghost&quot; type=&quot;button&quot; data-screen=&quot;ask&quot;&gt;Ask about this&lt;/button&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-story&quot;&gt;&lt;div class=&quot;iw-scene&quot;&gt;&lt;span class=&quot;iw-sun&quot;&gt;&lt;/span&gt;&lt;span class=&quot;iw-mountain&quot;&gt;&lt;/span&gt;&lt;span class=&quot;iw-mountain two&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-storycopy&quot;&gt;&lt;h3&gt;At the edge of the ili&lt;/h3&gt;&lt;p&gt;A short, community-approved story with sound, place, and a learner response.&lt;/p&gt;&lt;div class=&quot;iw-storymeta&quot;&gt;&lt;span&gt;◉ iteneng · Listen&lt;/span&gt;&lt;span&gt;▧ Read transcript&lt;/span&gt;&lt;span&gt;AR view&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-permission&quot;&gt;◈ Community / Educational · approved for this experience&lt;/div&gt;&lt;button class=&quot;iw-primary&quot; type=&quot;button&quot; id=&quot;iwStartStory&quot; style=&quot;width:100%;margin-top:12px&quot;&gt;Start story&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;After the story&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Reflection&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-note&quot; id=&quot;iwStoryNote&quot;&gt;Answer one question in Ibaloi or English. The app can give language feedback, but the story’s cultural meaning stays anchored to its approved source.&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;mentor&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt; Human support&lt;/div&gt;&lt;span class=&quot;iw-pill&quot; style=&quot;background:#fff3df;color:#9b6a21&quot;&gt;2 replies&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-note&quot; style=&quot;background:#fff8ed;border-color:#f1ddba&quot;&gt;Use this space when a question needs a person: local variation, cultural context, sensitive material, or a correction you do not understand.&lt;/div&gt;
+          &lt;div class=&quot;iw-messages&quot; style=&quot;height:330px;margin-top:10px&quot;&gt;&lt;div class=&quot;iw-msg user&quot;&gt;Is this expression okay to use with my grandmother?&lt;/div&gt;&lt;div class=&quot;iw-msg mentor&quot;&gt;&lt;b&gt;Representative · Lina&lt;/b&gt;&lt;br&gt;It can be used in some family settings, but the relationship and occasion matter. I added a safer example for practice.&lt;small&gt;Human response · shared with learner permission&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;iw-msg ai&quot;&gt;&lt;b&gt;AI follow-up&lt;/b&gt;&lt;br&gt;I can help you practice the approved example. I will not add this conversation to the knowledge base unless you and Lina separately agree.&lt;small&gt;Permission boundary&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-composer&quot;&gt;&lt;input aria-label=&quot;Message a representative&quot; placeholder=&quot;Write a reply…&quot;&gt;&lt;button class=&quot;iw-primary&quot; type=&quot;button&quot; id=&quot;iwSendMentor&quot;&gt;Send&lt;/button&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;review&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt; Community review&lt;/div&gt;&lt;button class=&quot;iw-ghost&quot; type=&quot;button&quot; data-view=&quot;learner&quot;&gt;Exit&lt;/button&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-review&quot;&gt;&lt;div class=&quot;iw-reviewhead&quot;&gt;&lt;div&gt;&lt;h3&gt;Items needing a decision&lt;/h3&gt;&lt;p&gt;Nothing enters learner search without permission.&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;iw-statuspill&quot;&gt;3 to review&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-reviewrow&quot;&gt;&lt;div class=&quot;iw-thumb&quot;&gt;Aa&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Greeting example&lt;/strong&gt;&lt;small&gt;Kabayan · text + audio · proposed: Educational&lt;/small&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;iw-approve&quot;&gt;Review&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;iw-reviewrow&quot;&gt;&lt;div class=&quot;iw-thumb&quot;&gt;◒&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Story recording&lt;/strong&gt;&lt;small&gt;Upper Loakan · audio · proposed: Restricted&lt;/small&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;iw-approve&quot;&gt;Review&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;iw-reviewrow&quot;&gt;&lt;div class=&quot;iw-thumb&quot;&gt;⌁&lt;/div&gt;&lt;div&gt;&lt;strong&gt;New learner question&lt;/strong&gt;&lt;small&gt;“Can I use this in a ceremony?” · needs human answer&lt;/small&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;iw-approve&quot;&gt;Route&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;Permission levels&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Governance rules&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-note&quot;&gt;Public · Community / Educational · Research-only · Restricted · Non-digitizable. Record consent separately for display, playback, editing, speech technology, and synthetic voice.&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;research&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt; Study mode&lt;/div&gt;&lt;span class=&quot;iw-pill&quot; style=&quot;background:#e7f4ee;color:#2f7857&quot;&gt;Consented&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-metric&quot;&gt;&lt;h3&gt;Learning check-ins&lt;/h3&gt;&lt;p&gt;Pretest → posttest → delayed posttest&lt;/p&gt;&lt;div class=&quot;iw-bars&quot;&gt;&lt;span class=&quot;iw-bar&quot; style=&quot;height:38%&quot;&gt;&lt;/span&gt;&lt;span class=&quot;iw-bar&quot; style=&quot;height:57%&quot;&gt;&lt;/span&gt;&lt;span class=&quot;iw-bar&quot; style=&quot;height:72%&quot;&gt;&lt;/span&gt;&lt;span class=&quot;iw-bar&quot; style=&quot;height:64%&quot;&gt;&lt;/span&gt;&lt;span class=&quot;iw-bar&quot; style=&quot;height:81%&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-axis&quot;&gt;&lt;span&gt;Baseline&lt;/span&gt;&lt;span&gt;niman&lt;small&gt;Now&lt;/small&gt;&lt;/span&gt;&lt;span&gt;asanem&lt;small&gt;Later&lt;/small&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;What the study may ask&lt;/h4&gt;&lt;/div&gt;&lt;div class=&quot;iw-action-grid&quot;&gt;&lt;div class=&quot;iw-action&quot;&gt;&lt;span class=&quot;iw-icon blue&quot;&gt;▤&lt;/span&gt;&lt;strong&gt;Language performance&lt;/strong&gt;&lt;span&gt;Vocabulary, sentence construction, listening, speaking.&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-action&quot;&gt;&lt;span class=&quot;iw-icon mint&quot;&gt;♡&lt;/span&gt;&lt;strong&gt;Experience&lt;/strong&gt;&lt;span&gt;Confidence, belonging, connection, willingness to use Ibaloi.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;iw-note&quot; style=&quot;margin-top:11px&quot;&gt;Your answers are research data only if you consent. Identity is not scored by language proficiency.&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-screen iw-hide&quot; data-pane=&quot;vocab&quot;&gt;
+          &lt;div class=&quot;iw-topbar&quot;&gt;&lt;div class=&quot;iw-brand&quot;&gt;&lt;span class=&quot;iw-mark&quot;&gt;ᐱ&lt;/span&gt;&lt;div&gt;&lt;div&gt;Word Garden&lt;/div&gt;&lt;span class=&quot;iw-ib-inline&quot;&gt;Vocabulary practice · MVP&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;iw-pill&quot; style=&quot;background:#e9edff;color:#4e68c8&quot;&gt;3 to revisit&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-note&quot; style=&quot;background:#f8faff;border-color:#c8d1ec&quot;&gt;&lt;b&gt;Today’s small step&lt;/b&gt;&lt;br&gt;Recall one word, hear it in context, then decide when you would use it. This is practice—not a ranking.&lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;Practice one word&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Guidebook-backed&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-builder&quot;&gt;
+            &lt;div class=&quot;iw-wordmeta&quot;&gt;&lt;span id=&quot;iwWordPos&quot;&gt;Verb&lt;/span&gt;&lt;span id=&quot;iwWordStatus&quot;&gt;Guidebook draft&lt;/span&gt;&lt;span&gt;Community review needed&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;iw-wordmark&quot; id=&quot;iwWordTerm&quot;&gt;eguatan&lt;/div&gt;
+            &lt;div class=&quot;iw-wordgloss&quot; id=&quot;iwWordGloss&quot;&gt;understand / know&lt;/div&gt;
+            &lt;div class=&quot;iw-wordmeta&quot;&gt;&lt;span&gt;Source: A Handy Guidebook&lt;/span&gt;&lt;span&gt;Meaning shown in English&lt;/span&gt;&lt;/div&gt;
+            &lt;div style=&quot;display:flex;gap:7px;margin-top:11px&quot;&gt;&lt;button class=&quot;iw-primary&quot; type=&quot;button&quot; id=&quot;iwRevealWord&quot;&gt;Reveal meaning&lt;/button&gt;&lt;button class=&quot;iw-ghost&quot; type=&quot;button&quot; id=&quot;iwSaveWord&quot;&gt;Save to garden&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;iw-wordanswer iw-hide&quot; id=&quot;iwWordAnswer&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;iw-sectionline&quot;&gt;&lt;h4&gt;Three words to revisit&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Tap a word&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;iw-action-grid&quot; id=&quot;iwWordCards&quot;&gt;
+            &lt;button class=&quot;iw-action iw-wordcard is-selected&quot; type=&quot;button&quot; aria-pressed=&quot;true&quot; data-word-term=&quot;eguatan&quot; data-word-gloss=&quot;understand / know&quot; data-word-pos=&quot;Verb&quot; data-word-status=&quot;Guidebook draft&quot; data-word-note=&quot;Direct guidebook match · community review before learner release&quot;&gt;&lt;span class=&quot;iw-wordterm&quot;&gt;eguatan&lt;/span&gt;&lt;span&gt;understand / know&lt;/span&gt;&lt;span&gt;Verb · direct match&lt;/span&gt;&lt;/button&gt;
+            &lt;button class=&quot;iw-action iw-wordcard&quot; type=&quot;button&quot; aria-pressed=&quot;false&quot; data-word-term=&quot;esel&quot; data-word-gloss=&quot;talk / speak&quot; data-word-pos=&quot;Verb&quot; data-word-status=&quot;Guidebook draft&quot; data-word-note=&quot;Direct guidebook match · community review before learner release&quot;&gt;&lt;span class=&quot;iw-wordterm&quot;&gt;esel&lt;/span&gt;&lt;span&gt;talk / speak&lt;/span&gt;&lt;span&gt;Verb · direct match&lt;/span&gt;&lt;/button&gt;
+            &lt;button class=&quot;iw-action iw-wordcard&quot; type=&quot;button&quot; aria-pressed=&quot;false&quot; data-word-term=&quot;iteneng&quot; data-word-gloss=&quot;listen / hear&quot; data-word-pos=&quot;Verb&quot; data-word-status=&quot;Guidebook draft&quot; data-word-note=&quot;Direct guidebook match · community review before learner release&quot;&gt;&lt;span class=&quot;iw-wordterm&quot;&gt;iteneng&lt;/span&gt;&lt;span&gt;listen / hear&lt;/span&gt;&lt;span&gt;Verb · direct match&lt;/span&gt;&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;iw-note&quot; style=&quot;margin-top:11px&quot;&gt;Word records can carry locality, audio, example phrases, permission, and revision history. Add community validation before publishing a learner-facing form.&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;iw-bottomnav&quot;&gt;&lt;button type=&quot;button&quot; data-screen=&quot;home&quot; class=&quot;is-active&quot; aria-label=&quot;Home&quot;&gt;&lt;em&gt;⌂&lt;/em&gt;Home&lt;/button&gt;&lt;button type=&quot;button&quot; data-screen=&quot;vocab&quot; aria-label=&quot;Words · Word Garden&quot;&gt;&lt;em&gt;Aa&lt;/em&gt;Words&lt;/button&gt;&lt;button type=&quot;button&quot; data-screen=&quot;ask&quot; aria-label=&quot;Ask · ibagga&quot;&gt;&lt;em&gt;⌕&lt;/em&gt;ibagga&lt;/button&gt;&lt;button type=&quot;button&quot; data-screen=&quot;story&quot; aria-label=&quot;Stories · istoria&quot;&gt;&lt;em&gt;◒&lt;/em&gt;istoria&lt;/button&gt;&lt;button type=&quot;button&quot; data-screen=&quot;mentor&quot; aria-label=&quot;People · to-o&quot;&gt;&lt;em&gt;◉&lt;/em&gt;to-o&lt;/button&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class=&quot;iw-panel&quot;&gt;
+      &lt;div class=&quot;iw-panel-title&quot;&gt;&lt;h2 id=&quot;iwRightTitle&quot;&gt;Interaction notes&lt;/h2&gt;&lt;span id=&quot;iwViewHint&quot;&gt;Learner flow&lt;/span&gt;&lt;/div&gt;
+      &lt;div id=&quot;iwRightContent&quot;&gt;
+        &lt;div class=&quot;iw-review&quot; style=&quot;padding:15px&quot;&gt;&lt;div class=&quot;iw-reviewhead&quot; style=&quot;padding:0 0 11px&quot;&gt;&lt;div&gt;&lt;h3&gt;Screen logic&lt;/h3&gt;&lt;p&gt;How this screen translates the study into a product behavior.&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;iw-statuspill&quot; style=&quot;background:#e9edff;color:#4e68c8&quot;&gt;01&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-info&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;&lt;b&gt;Welcome before content.&lt;/b&gt;&lt;br&gt;Introduce community governance, permission, language scope, and the learner’s choice of starting point.&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-info&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;&lt;b&gt;Set expectations.&lt;/b&gt;&lt;br&gt;AI supplements human teaching; Ainu is not preloaded as an assumed transfer.&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-info&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;&lt;b&gt;Offer a clear next action.&lt;/b&gt;&lt;br&gt;Continue as learner, begin with a little knowledge, or seek a human guide.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;iw-review&quot; style=&quot;padding:15px;margin-top:12px;background:linear-gradient(145deg,#fff,#f8f7ff)&quot;&gt;&lt;div class=&quot;iw-sectionline&quot; style=&quot;margin-top:0&quot;&gt;&lt;h4&gt;Design language from the inspiration&lt;/h4&gt;&lt;span class=&quot;iw-link&quot;&gt;Adapted&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;iw-info&quot;&gt;&lt;span&gt;✦&lt;/span&gt;&lt;span&gt;Friendly welcome, soft background shapes, a compact mobile card, and a calm color system. The language-learning concept adds source labels, community authority, and refusal states.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;iw-foot&quot;&gt;&lt;b&gt;Design boundary:&lt;/b&gt; these are wireframes for discussion. The source content, community permissions, local varieties, and Ainu adaptation decisions must be finalized with the relevant communities before implementation.&lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(() =&gt; {
+  const root = document.getElementById(&#x27;ibaloiWireframes&#x27;);
+  if (!root) return;
+  const title = root.querySelector(&#x27;#iwScreenTitle&#x27;);
+  const rightTitle = root.querySelector(&#x27;#iwRightTitle&#x27;);
+  const rightHint = root.querySelector(&#x27;#iwViewHint&#x27;);
+  const right = root.querySelector(&#x27;#iwRightContent&#x27;);
+  const screenNames = {welcome:&#x27;01 · Welcome / consent&#x27;,home:&#x27;02 · Home / learning path&#x27;,ask:&#x27;03 · Ask Ibaloi&#x27;,builder:&#x27;04 · Sentence Builder&#x27;,story:&#x27;05 · Story / AR&#x27;,mentor:&#x27;06 · Mentor / live support&#x27;,review:&#x27;07 · Community governance&#x27;,research:&#x27;08 · Study mode&#x27;,vocab:&#x27;09 · Word Garden / MVP&#x27;};
+  const viewHints = {learner:&#x27;Learner flow&#x27;,community:&#x27;Community authority flow&#x27;,research:&#x27;Study instrumentation&#x27;};
+  const interactionNotes = {
+    welcome:[&#x27;Introduce the community-governed premise before asking the learner to proceed.&#x27;,&#x27;Show language scope and the relationship between Ibaloi-first development and later Ainu co-design.&#x27;,&#x27;Offer a low-friction choice: learn independently or meet a human guide.&#x27;],
+    home:[&#x27;Make the research model visible as a four-step journey: UNDERSTAND → CONSTRUCT → EXPERIENCE → SPEAK.&#x27;,&#x27;Keep the home screen action-oriented with four routes: Ask, Build, Story, People.&#x27;,&#x27;Progress is about practice, not an identity score.&#x27;],
+    ask:[&#x27;Show the answer and its evidence together; source visibility is part of the learning experience.&#x27;,&#x27;Preserve locality and alternative forms instead of flattening variation.&#x27;,&#x27;When evidence or permission is insufficient, route to a human or refuse.&#x27;],
+    builder:[&#x27;Use a bounded situation, not unrestricted translation.&#x27;,&#x27;Correction includes a short explanation and a validated source.&#x27;,&#x27;A learner can save the phrase for later practice and hear an approved example.&#x27;],
+    story:[&#x27;Start with a small, approved story rather than a large virtual world.&#x27;,&#x27;Separate recording consent from playback, editing, AR/VR use, and model training.&#x27;,&#x27;After the story, ask for a response and provide language feedback without inventing cultural meaning.&#x27;],
+    mentor:[&#x27;Human support is a first-class path for uncertainty, sensitive topics, and cultural interpretation.&#x27;,&#x27;Label human replies separately from AI replies.&#x27;,&#x27;Do not ingest live-chat content into the knowledge base without separate permission.&#x27;],
+    review:[&#x27;Community authority is implemented as enforceable access and retrieval rules.&#x27;,&#x27;Every record carries source, locality, validation, and permission metadata.&#x27;,&#x27;Non-digitization and withholding are valid outcomes.&#x27;],
+    research:[&#x27;Support pretest, posttest, and delayed posttest measurement.&#x27;,&#x27;Collect usage and experience data only with consent.&#x27;,&#x27;Keep language outcomes separate from identity, belonging, connection, and confidence measures.&#x27;]
+    ,vocab:[&#x27;Make vocabulary practice small, repeatable, and connected to an approved word record.&#x27;,&#x27;Show part of speech, source, and review status before a learner uses a form.&#x27;,&#x27;Use recall and explanation instead of hearts, public ranking, or a proficiency score.&#x27;]
+  };
+  const noteMarkup = (items, code) =&gt; &#x27;&lt;div class=&quot;iw-review&quot; style=&quot;padding:15px&quot;&gt;&lt;div class=&quot;iw-reviewhead&quot; style=&quot;padding:0 0 11px&quot;&gt;&lt;div&gt;&lt;h3&gt;Interaction notes&lt;/h3&gt;&lt;p&gt;Product behavior implied by the study.&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;iw-statuspill&quot; style=&quot;background:#e9edff;color:#4e68c8&quot;&gt;&#x27;+code+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;+items.map((x,i)=&gt;&#x27;&lt;div class=&quot;iw-info&quot;&gt;&lt;span&gt;&#x27;+(i+1)+&#x27;&lt;/span&gt;&lt;span&gt;&#x27;+x+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/div&gt;&#x27;;
+  function showScreen(name) {
+    root.querySelectorAll(&#x27;[data-pane]&#x27;).forEach(p =&gt; p.classList.toggle(&#x27;iw-hide&#x27;, p.getAttribute(&#x27;data-pane&#x27;) !== name));
+    root.querySelectorAll(&#x27;.iw-tabs button&#x27;).forEach(b =&gt; b.setAttribute(&#x27;aria-pressed&#x27;, String(b.dataset.screen === name)));
+    const navScreen = [&#x27;vocab&#x27;,&#x27;ask&#x27;,&#x27;story&#x27;,&#x27;mentor&#x27;].includes(name) ? name : &#x27;home&#x27;;
+    root.querySelectorAll(&#x27;.iw-bottomnav button&#x27;).forEach(b =&gt; b.classList.toggle(&#x27;is-active&#x27;, b.dataset.screen === navScreen));
+    title.textContent = screenNames[name] || screenNames.welcome;
+    right.innerHTML = noteMarkup(interactionNotes[name] || interactionNotes.welcome, (name === &#x27;welcome&#x27; ? &#x27;01&#x27; : name === &#x27;home&#x27; ? &#x27;02&#x27; : name === &#x27;ask&#x27; ? &#x27;03&#x27; : name === &#x27;builder&#x27; ? &#x27;04&#x27; : name === &#x27;story&#x27; ? &#x27;05&#x27; : name === &#x27;mentor&#x27; ? &#x27;06&#x27; : name === &#x27;review&#x27; ? &#x27;07&#x27; : name === &#x27;research&#x27; ? &#x27;08&#x27; : &#x27;09&#x27;));
+  }
+  root.addEventListener(&#x27;click&#x27;, e =&gt; {
+    const screenButton = e.target.closest(&#x27;[data-screen]&#x27;);
+    if (screenButton) showScreen(screenButton.dataset.screen);
+    const viewButton = e.target.closest(&#x27;[data-view]&#x27;);
+    if (viewButton) { root.querySelectorAll(&#x27;[data-view]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;, String(b.dataset.view===viewButton.dataset.view))); rightHint.textContent=viewHints[viewButton.dataset.view] || &#x27;Learner flow&#x27;; }
+    const wordCard = e.target.closest(&#x27;[data-word-term]&#x27;);
+    if (wordCard) {
+      root.querySelectorAll(&#x27;[data-word-term]&#x27;).forEach(card =&gt; { const selected = card === wordCard; card.classList.toggle(&#x27;is-selected&#x27;, selected); card.setAttribute(&#x27;aria-pressed&#x27;, String(selected)); });
+      root.querySelector(&#x27;#iwWordTerm&#x27;).textContent = wordCard.dataset.wordTerm;
+      root.querySelector(&#x27;#iwWordGloss&#x27;).textContent = wordCard.dataset.wordGloss;
+      root.querySelector(&#x27;#iwWordPos&#x27;).textContent = wordCard.dataset.wordPos;
+      root.querySelector(&#x27;#iwWordStatus&#x27;).textContent = wordCard.dataset.wordStatus;
+      root.querySelector(&#x27;#iwWordAnswer&#x27;).classList.add(&#x27;iw-hide&#x27;);
+      root.querySelector(&#x27;#iwRevealWord&#x27;).textContent = &#x27;Reveal meaning&#x27;;
+      root.querySelector(&#x27;#iwSaveWord&#x27;).textContent = &#x27;Save to garden&#x27;;
+    }
+    if (e.target.closest(&#x27;#iwRevealWord&#x27;)) {
+      const selected = root.querySelector(&#x27;[data-word-term].is-selected&#x27;) || root.querySelector(&#x27;[data-word-term]&#x27;);
+      const answer = root.querySelector(&#x27;#iwWordAnswer&#x27;);
+      answer.innerHTML = &#x27;&lt;b&gt;English gloss&lt;/b&gt;&lt;br&gt;&#x27;+selected.dataset.wordGloss+&#x27;&lt;br&gt;&lt;small&gt;&#x27;+selected.dataset.wordNote+&#x27;&lt;/small&gt;&#x27;;
+      answer.classList.remove(&#x27;iw-hide&#x27;);
+      root.querySelector(&#x27;#iwRevealWord&#x27;).textContent = &#x27;Meaning shown&#x27;;
+    }
+    if (e.target.closest(&#x27;#iwSaveWord&#x27;)) { e.target.closest(&#x27;#iwSaveWord&#x27;).textContent = &#x27;Saved to garden&#x27;; }
+    if (e.target.closest(&#x27;#iwSourceToggle&#x27;)) root.querySelector(&#x27;#iwSourceBox&#x27;).classList.toggle(&#x27;is-open&#x27;);
+    if (e.target.closest(&#x27;#iwSendAsk&#x27;)) { const m=root.querySelector(&#x27;.iw-messages&#x27;); m.insertAdjacentHTML(&#x27;beforeend&#x27;,&#x27;&lt;div class=&quot;iw-msg user&quot;&gt;Can you show another example?&lt;small&gt;You · just now&lt;/small&gt;&lt;/div&gt;&lt;div class=&quot;iw-msg ai&quot;&gt;I can look for another approved example, or route this to a representative if you want a local comparison.&lt;small&gt;AI answer · follow-up&lt;/small&gt;&lt;/div&gt;&#x27;); m.scrollTop=m.scrollHeight; }
+    if (e.target.closest(&#x27;#iwCorrect&#x27;)) root.querySelector(&#x27;#iwCorrection&#x27;).innerHTML=&#x27;&lt;b&gt;Suggestion updated&lt;/b&gt;&lt;br&gt;Your sentence is understandable. Try the community-validated word order below for this situation, then listen and repeat.&lt;br&gt;&lt;small style=&quot;color:#4d806a&quot;&gt;Source: validated example · correction explained&lt;/small&gt;&#x27;;
+    if (e.target.closest(&#x27;#iwStartStory&#x27;)) { e.target.closest(&#x27;#iwStartStory&#x27;).textContent=&#x27;Story playing · pause&#x27;; root.querySelector(&#x27;#iwStoryNote&#x27;).textContent=&#x27;Listen for the place word, then answer: “What did the speaker notice?” Your response can be in English first, then you can try the approved phrase.&#x27;; }
+    if (e.target.closest(&#x27;#iwSendMentor&#x27;)) { const m=root.querySelector(&#x27;[data-pane=&quot;mentor&quot;] .iw-messages&#x27;); m.insertAdjacentHTML(&#x27;beforeend&#x27;,&#x27;&lt;div class=&quot;iw-msg user&quot;&gt;Thank you—I will practice the approved example.&lt;/div&gt;&#x27;); m.scrollTop=m.scrollHeight; }
+    if (e.target.closest(&#x27;.iw-approve&#x27;)) { const b=e.target.closest(&#x27;.iw-approve&#x27;); b.textContent=&#x27;Queued&#x27;; b.style.color=&#x27;#2f7857&#x27;; b.style.borderColor=&#x27;#b9e1cf&#x27;; }
+  });
+  showScreen(&#x27;welcome&#x27;);
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Ibaloi Learner Flow</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Ibaloi Learner Flow" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Ibaloi Learner Flow&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  display: flex;
+  height: 6px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 6px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;ibaloiLearnerFlow&quot;&gt;
+  &lt;style&gt;
+    #ibaloiLearnerFlow {
+      color-scheme: light dark;
+      --ilf-ink: light-dark(#1f2940, #f3f6ff);
+      --ilf-muted: light-dark(#66718b, #aeb9d1);
+      --ilf-blue: light-dark(#5f7fe8, #8da5ff);
+      --ilf-blue-deep: light-dark(#3c5fcd, #b9c7ff);
+      --ilf-lilac: light-dark(#9f8fe8, #b6a9ff);
+      --ilf-coral: light-dark(#ef9b8d, #ffb2a4);
+      --ilf-mint: light-dark(#d9f0e8, #224b45);
+      --ilf-paper: light-dark(#fffdfb, #1b2234);
+      --ilf-line: light-dark(#d9e0ed, #39445e);
+      --ilf-bg: light-dark(#eef3f9, #111729);
+      --ilf-soft: light-dark(#f7f9fe, #202943);
+      --ilf-warn: light-dark(#fff3df, #4a3820);
+      --ilf-warn-ink: light-dark(#8e6526, #ffd993);
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 20px;
+      background: radial-gradient(circle at 7% 0%, color-mix(in srgb, var(--ilf-lilac) 22%, transparent), transparent 34%), linear-gradient(135deg, var(--ilf-soft), var(--ilf-bg));
+      border-radius: 26px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
+      box-sizing: border-box;
+    }
+    #ibaloiLearnerFlow * { box-sizing: border-box; }
+    #ibaloiLearnerFlow button { font: inherit; }
+    .ilf-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding:4px 6px 18px; }
+    .ilf-kicker { margin:0 0 5px; color:var(--ilf-blue-deep); font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .ilf-head h1 { margin:0; color:var(--ilf-ink); font-size:clamp(23px,3.3vw,36px); line-height:1.05; letter-spacing:-.045em; }
+    .ilf-head p { max-width:690px; margin:9px 0 0; color:var(--ilf-muted); font-size:13px; line-height:1.45; }
+    .ilf-flowbadge { flex:0 0 auto; border:1px solid color-mix(in srgb, var(--ilf-blue) 34%, var(--ilf-line)); border-radius:99px; padding:8px 11px; background:color-mix(in srgb, var(--ilf-blue) 10%, var(--ilf-paper)); color:var(--ilf-blue-deep); font-size:10px; font-weight:800; white-space:nowrap; }
+    .ilf-legend { display:flex; flex-wrap:wrap; gap:7px; align-items:center; margin:0 6px 16px; color:var(--ilf-muted); font-size:10px; }
+    .ilf-legend span { display:inline-flex; align-items:center; gap:5px; }
+    .ilf-legend i { width:8px; height:8px; display:inline-block; border-radius:50%; background:var(--ilf-blue); }
+    .ilf-legend i.branch { background:var(--ilf-coral); }
+    .ilf-legend i.review { background:var(--ilf-lilac); }
+    .ilf-board { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(270px,.8fr); gap:16px; align-items:start; }
+    .ilf-flowpanel { min-width:0; padding:15px; border:1px solid color-mix(in srgb, var(--ilf-line) 90%, transparent); border-radius:20px; background:color-mix(in srgb, var(--ilf-paper) 94%, transparent); }
+    .ilf-panelhead { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:0 0 12px; }
+    .ilf-panelhead h2 { margin:0; color:var(--ilf-ink); font-size:15px; letter-spacing:-.02em; }
+    .ilf-panelhead span { color:var(--ilf-muted); font-size:10px; }
+    .ilf-phase { position:relative; padding:13px 0 15px; border-top:1px solid color-mix(in srgb, var(--ilf-line) 72%, transparent); }
+    .ilf-phase:first-of-type { padding-top:3px; border-top:0; }
+    .ilf-phasehead { display:flex; align-items:center; gap:8px; margin-bottom:9px; }
+    .ilf-phasehead strong { color:var(--ilf-ink); font-size:11px; }
+    .ilf-phasehead span { color:var(--ilf-muted); font-size:9px; }
+    .ilf-phase-dot { width:20px; height:20px; display:grid; place-items:center; border-radius:7px; background:var(--ilf-blue); color:#fff; font-size:10px; font-weight:800; }
+    .ilf-phase-flow { display:flex; align-items:stretch; gap:7px; }
+    .ilf-arrow { flex:0 0 auto; align-self:center; color:var(--ilf-blue-deep); font-size:18px; font-weight:500; }
+    .ilf-screen { flex:1 1 0; min-width:0; padding:0; border:1px solid var(--ilf-line); border-radius:16px; background:var(--ilf-paper); color:var(--ilf-ink); text-align:left; cursor:pointer; overflow:hidden; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .ilf-screen:hover, .ilf-screen:focus-visible { border-color:var(--ilf-blue); transform:translateY(-1px); box-shadow:0 7px 18px color-mix(in srgb, var(--ilf-blue) 18%, transparent); }
+    .ilf-screen.is-selected { border:2px solid var(--ilf-blue); background:color-mix(in srgb, var(--ilf-blue) 7%, var(--ilf-paper)); }
+    .ilf-minichrome { display:flex; justify-content:space-between; padding:8px 10px 5px; color:var(--ilf-muted); font-size:8px; font-weight:800; }
+    .ilf-minibody { padding:3px 10px 11px; }
+    .ilf-minibrand { display:flex; align-items:center; gap:5px; margin:0 0 9px; font-size:9px; font-weight:800; }
+    .ilf-mark { width:15px; height:15px; display:grid; place-items:center; border-radius:5px; background:linear-gradient(135deg,var(--ilf-blue),var(--ilf-lilac)); color:#fff; font-size:8px; }
+    .ilf-minipill { display:inline-flex; border-radius:99px; padding:3px 5px; background:color-mix(in srgb, var(--ilf-blue) 13%, var(--ilf-paper)); color:var(--ilf-blue-deep); font-size:7px; font-weight:800; }
+    .ilf-minititle { margin:7px 0 0; color:var(--ilf-ink); font-size:13px; font-weight:800; line-height:1.08; letter-spacing:-.03em; }
+    .ilf-minitext { margin:5px 0 0; color:var(--ilf-muted); font-size:8px; line-height:1.35; }
+    .ilf-miniline { height:7px; margin-top:6px; border-radius:4px; background:color-mix(in srgb, var(--ilf-line) 57%, transparent); }
+    .ilf-miniline.short { width:62%; }
+    .ilf-minichips { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+    .ilf-minichips span { border:1px solid var(--ilf-line); border-radius:99px; padding:3px 5px; color:var(--ilf-muted); font-size:7px; }
+    .ilf-miniaction { display:block; width:100%; margin-top:9px; border:0; border-radius:7px; padding:6px; background:var(--ilf-blue); color:#fff; font-size:8px; font-weight:800; text-align:center; }
+    .ilf-miniaction.ghost { border:1px solid var(--ilf-line); background:transparent; color:var(--ilf-blue-deep); }
+    .ilf-ibword { color:var(--ilf-blue-deep); font-size:10px; font-weight:800; }
+    .ilf-ibnote { margin-top:3px; color:var(--ilf-muted); font-size:7px; }
+    .ilf-branchrow { display:grid; grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr); gap:7px; align-items:center; }
+    .ilf-branchmark { display:grid; place-items:center; color:var(--ilf-coral); font-size:17px; }
+    .ilf-branchcaption { margin:8px 0 0; color:var(--ilf-muted); font-size:9px; text-align:center; }
+    .ilf-detail { position:sticky; top:12px; padding:16px; border:1px solid color-mix(in srgb, var(--ilf-line) 90%, transparent); border-radius:20px; background:var(--ilf-paper); }
+    .ilf-detailhead { display:flex; justify-content:space-between; align-items:flex-start; gap:9px; padding-bottom:12px; border-bottom:1px solid var(--ilf-line); }
+    .ilf-detailhead h2 { margin:0; color:var(--ilf-ink); font-size:17px; line-height:1.1; letter-spacing:-.03em; }
+    .ilf-detailhead p { margin:4px 0 0; color:var(--ilf-muted); font-size:10px; line-height:1.35; }
+    .ilf-stepbadge { flex:0 0 auto; border-radius:99px; padding:5px 7px; background:var(--ilf-warn); color:var(--ilf-warn-ink); font-size:9px; font-weight:800; }
+    .ilf-detailgrid { display:grid; gap:10px; margin-top:13px; }
+    .ilf-detailitem { padding-bottom:9px; border-bottom:1px solid color-mix(in srgb, var(--ilf-line) 65%, transparent); }
+    .ilf-detailitem:last-child { padding-bottom:0; border-bottom:0; }
+    .ilf-detailitem label { display:block; margin-bottom:4px; color:var(--ilf-muted); font-size:8px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+    .ilf-detailitem div { color:var(--ilf-ink); font-size:11px; line-height:1.42; }
+    .ilf-detailitem .ilf-mutedcopy { color:var(--ilf-muted); }
+    .ilf-callout { margin-top:13px; padding:10px 11px; border-radius:12px; background:color-mix(in srgb, var(--ilf-mint) 52%, var(--ilf-paper)); color:var(--ilf-ink); font-size:10px; line-height:1.4; }
+    .ilf-foot { margin:15px 5px 0; color:var(--ilf-muted); font-size:10px; line-height:1.4; }
+    .ilf-foot strong { color:var(--ilf-ink); }
+    @media (max-width: 920px) {
+      #ibaloiLearnerFlow { padding:14px; border-radius:18px; }
+      .ilf-head { flex-direction:column; }
+      .ilf-flowbadge { align-self:flex-start; }
+      .ilf-board { grid-template-columns:1fr; }
+      .ilf-detail { position:static; }
+    }
+    @media (max-width: 560px) {
+      .ilf-phase-flow, .ilf-branchrow { grid-template-columns:1fr; display:grid; }
+      .ilf-arrow { justify-self:center; transform:rotate(90deg); }
+      .ilf-branchmark { transform:rotate(90deg); }
+      .ilf-screen { min-height:142px; }
+    }
+  &lt;/style&gt;
+
+  &lt;header class=&quot;ilf-head&quot;&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;ilf-kicker&quot;&gt;Wireframe flow · learner point of view&lt;/p&gt;
+      &lt;h1&gt;From first greeting to first conversation.&lt;/h1&gt;
+      &lt;p&gt;A focused MVP journey for learning Ibaloi through short practice, trusted records, meaningful situations, and a safe path to human help.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;ilf-flowbadge&quot;&gt;8 screens · 1 core loop · 2 optional routes&lt;/span&gt;
+  &lt;/header&gt;
+
+  &lt;div class=&quot;ilf-legend&quot; aria-label=&quot;Flow legend&quot;&gt;
+    &lt;span&gt;&lt;i&gt;&lt;/i&gt;Core learner path&lt;/span&gt;&lt;span&gt;&lt;i class=&quot;branch&quot;&gt;&lt;/i&gt;Optional route&lt;/span&gt;&lt;span&gt;&lt;i class=&quot;review&quot;&gt;&lt;/i&gt;Community review / source status&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;main class=&quot;ilf-board&quot;&gt;
+    &lt;section class=&quot;ilf-flowpanel&quot; aria-label=&quot;Learner flow wireframes&quot;&gt;
+      &lt;div class=&quot;ilf-panelhead&quot;&gt;&lt;h2&gt;Learner flow&lt;/h2&gt;&lt;span&gt;Select a screen to inspect its behavior&lt;/span&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;ilf-phase&quot;&gt;
+        &lt;div class=&quot;ilf-phasehead&quot;&gt;&lt;span class=&quot;ilf-phase-dot&quot;&gt;1&lt;/span&gt;&lt;strong&gt;Begin with trust&lt;/strong&gt;&lt;span&gt;Before any lesson or score&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ilf-phase-flow&quot;&gt;
+          &lt;button class=&quot;ilf-screen is-selected&quot; type=&quot;button&quot; data-step=&quot;welcome&quot; aria-pressed=&quot;true&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;1 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;ᐱ&lt;/span&gt;Ibaloi / Ainu&lt;/div&gt;&lt;span class=&quot;ilf-minipill&quot;&gt;Community-governed&lt;/span&gt;&lt;div class=&quot;ilf-minititle&quot;&gt;Start with a word.&lt;/div&gt;&lt;div class=&quot;ilf-minitext&quot;&gt;Language, stories, and permissions are introduced first.&lt;/div&gt;&lt;div class=&quot;ilf-miniaction&quot;&gt;Continue as learner&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+          &lt;span class=&quot;ilf-arrow&quot; aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;
+          &lt;button class=&quot;ilf-screen&quot; type=&quot;button&quot; data-step=&quot;context&quot; aria-pressed=&quot;false&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;2 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;ᐱ&lt;/span&gt;Set my path&lt;/div&gt;&lt;div class=&quot;ilf-minititle&quot;&gt;What brings you here?&lt;/div&gt;&lt;div class=&quot;ilf-minichips&quot;&gt;&lt;span&gt;Family&lt;/span&gt;&lt;span&gt;Community&lt;/span&gt;&lt;span&gt;Study&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ilf-miniline&quot;&gt;&lt;/div&gt;&lt;div class=&quot;ilf-minitext&quot;&gt;Purpose and locality shape examples—not identity scores.&lt;/div&gt;&lt;div class=&quot;ilf-miniaction&quot;&gt;Set my path&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;ilf-phase&quot;&gt;
+        &lt;div class=&quot;ilf-phasehead&quot;&gt;&lt;span class=&quot;ilf-phase-dot&quot;&gt;2&lt;/span&gt;&lt;strong&gt;Build a small practice rhythm&lt;/strong&gt;&lt;span&gt;One repeatable loop, not a leaderboard&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ilf-phase-flow&quot;&gt;
+          &lt;button class=&quot;ilf-screen&quot; type=&quot;button&quot; data-step=&quot;today&quot; aria-pressed=&quot;false&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;3 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;ᐱ&lt;/span&gt;Today’s path&lt;/div&gt;&lt;span class=&quot;ilf-minipill&quot;&gt;Practice rhythm · 3 days&lt;/span&gt;&lt;div class=&quot;ilf-minititle&quot;&gt;One phrase. One connection.&lt;/div&gt;&lt;div class=&quot;ilf-minichips&quot;&gt;&lt;span&gt;3 words&lt;/span&gt;&lt;span&gt;1 situation&lt;/span&gt;&lt;span&gt;1 story&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ilf-miniaction&quot;&gt;Start small&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+          &lt;span class=&quot;ilf-arrow&quot; aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;
+          &lt;button class=&quot;ilf-screen&quot; type=&quot;button&quot; data-step=&quot;garden&quot; aria-pressed=&quot;false&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;4 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;Aa&lt;/span&gt;Word Garden&lt;/div&gt;&lt;div class=&quot;ilf-ibword&quot;&gt;eguatan&lt;/div&gt;&lt;div class=&quot;ilf-minitext&quot;&gt;understand / know · Verb&lt;/div&gt;&lt;div class=&quot;ilf-minichips&quot;&gt;&lt;span&gt;Guidebook draft&lt;/span&gt;&lt;span&gt;Review needed&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ilf-miniline&quot;&gt;&lt;/div&gt;&lt;div class=&quot;ilf-miniaction ghost&quot;&gt;Reveal meaning&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+          &lt;span class=&quot;ilf-arrow&quot; aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;
+          &lt;button class=&quot;ilf-screen&quot; type=&quot;button&quot; data-step=&quot;practice&quot; aria-pressed=&quot;false&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;5 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;◉&lt;/span&gt;Practice&lt;/div&gt;&lt;div class=&quot;ilf-minititle&quot;&gt;Hear → choose → say&lt;/div&gt;&lt;div class=&quot;ilf-minitext&quot;&gt;Try one word in a situation. Explain the correction.&lt;/div&gt;&lt;div class=&quot;ilf-minichips&quot;&gt;&lt;span&gt;Listen&lt;/span&gt;&lt;span&gt;Recall&lt;/span&gt;&lt;span&gt;Speak&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ilf-miniaction&quot;&gt;Try the word&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;ilf-phase&quot;&gt;
+        &lt;div class=&quot;ilf-phasehead&quot;&gt;&lt;span class=&quot;ilf-phase-dot&quot;&gt;3&lt;/span&gt;&lt;strong&gt;Use language in the world&lt;/strong&gt;&lt;span&gt;Choose the route that fits the learner’s need&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ilf-branchrow&quot;&gt;
+          &lt;button class=&quot;ilf-screen&quot; type=&quot;button&quot; data-step=&quot;ask&quot; aria-pressed=&quot;false&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;6 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;⌕&lt;/span&gt;Ask Ibaloi&lt;/div&gt;&lt;div class=&quot;ilf-minitext&quot;&gt;“How do I greet an elder?”&lt;/div&gt;&lt;div class=&quot;ilf-minichips&quot;&gt;&lt;span&gt;Validated&lt;/span&gt;&lt;span&gt;Variation&lt;/span&gt;&lt;span&gt;Mentor&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ilf-miniaction ghost&quot;&gt;Trace the source&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+          &lt;div class=&quot;ilf-branchmark&quot; aria-hidden=&quot;true&quot;&gt;↗&lt;/div&gt;
+          &lt;button class=&quot;ilf-screen&quot; type=&quot;button&quot; data-step=&quot;story&quot; aria-pressed=&quot;false&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;7 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;◒&lt;/span&gt;Story / place&lt;/div&gt;&lt;div class=&quot;ilf-ibword&quot;&gt;istoria&lt;/div&gt;&lt;div class=&quot;ilf-minitext&quot;&gt;Community-approved story · Upper Loakan&lt;/div&gt;&lt;div class=&quot;ilf-minichips&quot;&gt;&lt;span&gt;iteneng · Listen&lt;/span&gt;&lt;span&gt;Permission shown&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ilf-miniaction&quot;&gt;Enter story&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;ilf-branchcaption&quot;&gt;The learner may ask for clarification or enter an approved story; both routes return to reflection.&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;ilf-phase&quot;&gt;
+        &lt;div class=&quot;ilf-phasehead&quot;&gt;&lt;span class=&quot;ilf-phase-dot&quot;&gt;4&lt;/span&gt;&lt;strong&gt;Reflect and continue&lt;/strong&gt;&lt;span&gt;Progress is practice, confidence, and connection&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;ilf-phase-flow&quot;&gt;
+          &lt;button class=&quot;ilf-screen&quot; type=&quot;button&quot; data-step=&quot;reflect&quot; aria-pressed=&quot;false&quot;&gt;
+            &lt;div class=&quot;ilf-minichrome&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;8 / 8&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;ilf-minibody&quot;&gt;&lt;div class=&quot;ilf-minibrand&quot;&gt;&lt;span class=&quot;ilf-mark&quot;&gt;♡&lt;/span&gt;Reflect&lt;/div&gt;&lt;div class=&quot;ilf-minititle&quot;&gt;What felt easy?&lt;/div&gt;&lt;div class=&quot;ilf-minichips&quot;&gt;&lt;span&gt;Save phrase&lt;/span&gt;&lt;span&gt;Try again&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;ilf-minitext&quot;&gt;Private unless the learner consents to share for the study.&lt;/div&gt;&lt;div class=&quot;ilf-miniaction&quot;&gt;Choose next step&lt;/div&gt;&lt;/div&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;aside class=&quot;ilf-detail&quot; aria-live=&quot;polite&quot;&gt;
+      &lt;div class=&quot;ilf-detailhead&quot;&gt;&lt;div&gt;&lt;h2 id=&quot;ilfDetailTitle&quot;&gt;Welcome / consent&lt;/h2&gt;&lt;p id=&quot;ilfDetailSubtitle&quot;&gt;Trust comes before practice.&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;ilf-stepbadge&quot; id=&quot;ilfDetailStep&quot;&gt;01&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;ilf-detailgrid&quot; id=&quot;ilfDetailGrid&quot;&gt;
+        &lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;Learner action&lt;/label&gt;&lt;div&gt;Choose whether to continue independently or ask for a human guide.&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;System response&lt;/label&gt;&lt;div&gt;Explain language scope, community authority, permissions, and what the app can—and cannot—answer.&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;Decision point&lt;/label&gt;&lt;div class=&quot;ilf-mutedcopy&quot;&gt;Continue as learner → choose a purpose and context.&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;Design boundary&lt;/label&gt;&lt;div class=&quot;ilf-mutedcopy&quot;&gt;No universal greeting is implied. Guidebook draft wording stays marked for community review.&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ilf-callout&quot; id=&quot;ilfDetailCallout&quot;&gt;&lt;strong&gt;Why this is different:&lt;/strong&gt; the first screen establishes a relationship with the language community, not a game score.&lt;/div&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;p class=&quot;ilf-foot&quot;&gt;&lt;strong&gt;Learner POV only.&lt;/strong&gt; Mentor and researcher flows can be designed next as separate wireframe maps, while this flow shows where the learner can ask for support and where consent is revisited.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+(() =&gt; {
+  const root = document.getElementById(&#x27;ibaloiLearnerFlow&#x27;);
+  if (!root) return;
+  const steps = {
+    welcome: {step:&#x27;01&#x27;, title:&#x27;Welcome / consent&#x27;, subtitle:&#x27;Trust comes before practice.&#x27;, action:&#x27;Choose whether to continue independently or ask for a human guide.&#x27;, response:&#x27;Explain language scope, community authority, permissions, and what the app can—and cannot—answer.&#x27;, decision:&#x27;Continue as learner → choose a purpose and context.&#x27;, boundary:&#x27;No universal greeting is implied. Guidebook draft wording stays marked for community review.&#x27;, callout:&#x27;the first screen establishes a relationship with the language community, not a game score.&#x27;},
+    context: {step:&#x27;02&#x27;, title:&#x27;Purpose and context&#x27;, subtitle:&#x27;The learner chooses a situation, not an identity label.&#x27;, action:&#x27;Select why they want to learn and, when appropriate, the setting or locality.&#x27;, response:&#x27;Shape examples, vocabulary, and practice situations without treating one variety as universal.&#x27;, decision:&#x27;Set my path → see a small daily route.&#x27;, boundary:&#x27;Purpose and locality are learning context; they are not used to score cultural belonging.&#x27;, callout:&#x27;the learner’s reason for learning drives the path more than a generic level number.&#x27;},
+    today: {step:&#x27;03&#x27;, title:&#x27;Today’s path&#x27;, subtitle:&#x27;One small practice rhythm.&#x27;, action:&#x27;Choose one short route: words, a situation, or an approved story.&#x27;, response:&#x27;Offer a clear next step and show practice rhythm instead of XP or a public ranking.&#x27;, decision:&#x27;Start small → Word Garden, practice, or an optional question.&#x27;, boundary:&#x27;Missing a day never erases progress; the rhythm is encouragement, not pressure.&#x27;, callout:&#x27;the home screen is a calm launch point, not a dashboard full of scores.&#x27;},
+    garden: {step:&#x27;04&#x27;, title:&#x27;Word Garden&#x27;, subtitle:&#x27;Vocabulary stays attached to evidence.&#x27;, action:&#x27;Tap a word, reveal its meaning, hear it, and save it for review.&#x27;, response:&#x27;Show part of speech, English gloss, source, locality when known, permission, and review status.&#x27;, decision:&#x27;Practice the word → move into a situation-based activity.&#x27;, boundary:&#x27;Draft translations are not presented as final or universal forms.&#x27;, callout:&#x27;a vocabulary section becomes a provenance-aware memory space—not a list of decontextualized points.&#x27;},
+    practice: {step:&#x27;05&#x27;, title:&#x27;Practice loop&#x27;, subtitle:&#x27;Hear → understand → use → reflect.&#x27;, action:&#x27;Listen, recall, arrange or choose, say the word, and try again with an explanation.&#x27;, response:&#x27;Give a grounded correction and make uncertainty visible; avoid punitive hearts or accent scores.&#x27;, decision:&#x27;Try again, save the phrase, ask a question, or choose a story.&#x27;, boundary:&#x27;Automated feedback supports practice but does not decide cultural correctness.&#x27;, callout:&#x27;familiar micro-lessons are useful here, but the goal is confident use in context.&#x27;},
+    ask: {step:&#x27;06&#x27;, title:&#x27;Ask Ibaloi&#x27;, subtitle:&#x27;A question can end in evidence or human help.&#x27;, action:&#x27;Ask about a phrase, relationship, place, or situation.&#x27;, response:&#x27;Show validated examples, possible local variation, source trace, and a route to a representative when evidence is insufficient.&#x27;, decision:&#x27;Use the example, compare a variation, or ask a mentor.&#x27;, boundary:&#x27;The app can refuse to guess and never silently standardizes a locality.&#x27;, callout:&#x27;uncertainty is a visible learning state, not a failure message.&#x27;},
+    story: {step:&#x27;07&#x27;, title:&#x27;Story / place&#x27;, subtitle:&#x27;Language is encountered with people and place.&#x27;, action:&#x27;Listen to an approved story, view its context, and respond in English or Ibaloi.&#x27;, response:&#x27;Show permission level, locality, contributor credit, transcript, and listening controls.&#x27;, decision:&#x27;Reflect on the story → save language practice or ask for context.&#x27;, boundary:&#x27;Sensitive stories are not unlocked through points; access follows community permission.&#x27;, callout:&#x27;stories provide meaning and belonging without asking the learner to perform cultural expertise.&#x27;},
+    reflect: {step:&#x27;08&#x27;, title:&#x27;Reflect and continue&#x27;, subtitle:&#x27;Progress includes confidence and connection.&#x27;, action:&#x27;Record what felt easy, difficult, useful, or worth revisiting.&#x27;, response:&#x27;Offer retry, save, mentor support, and a next small step; share research data only with consent.&#x27;, decision:&#x27;Continue the rhythm, revisit a word, or request human help.&#x27;, boundary:&#x27;Language performance is measured separately from belonging, connection, confidence, and willingness to use Ibaloi.&#x27;, callout:&#x27;reflection closes the loop and gives the learner agency over what happens next.&#x27;}
+  };
+  const title = root.querySelector(&#x27;#ilfDetailTitle&#x27;);
+  const subtitle = root.querySelector(&#x27;#ilfDetailSubtitle&#x27;);
+  const badge = root.querySelector(&#x27;#ilfDetailStep&#x27;);
+  const grid = root.querySelector(&#x27;#ilfDetailGrid&#x27;);
+  const callout = root.querySelector(&#x27;#ilfDetailCallout&#x27;);
+  function selectStep(name) {
+    const data = steps[name] || steps.welcome;
+    root.querySelectorAll(&#x27;[data-step]&#x27;).forEach(button =&gt; {
+      const selected = button.dataset.step === name;
+      button.classList.toggle(&#x27;is-selected&#x27;, selected);
+      button.setAttribute(&#x27;aria-pressed&#x27;, String(selected));
+    });
+    title.textContent = data.title;
+    subtitle.textContent = data.subtitle;
+    badge.textContent = data.step;
+    grid.innerHTML = &#x27;&lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;Learner action&lt;/label&gt;&lt;div&gt;&#x27;+data.action+&#x27;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;System response&lt;/label&gt;&lt;div&gt;&#x27;+data.response+&#x27;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;Decision point&lt;/label&gt;&lt;div class=&quot;ilf-mutedcopy&quot;&gt;&#x27;+data.decision+&#x27;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ilf-detailitem&quot;&gt;&lt;label&gt;Design boundary&lt;/label&gt;&lt;div class=&quot;ilf-mutedcopy&quot;&gt;&#x27;+data.boundary+&#x27;&lt;/div&gt;&lt;/div&gt;&#x27;;
+    callout.innerHTML = &#x27;&lt;strong&gt;Why this is different:&lt;/strong&gt; &#x27;+data.callout;
+  }
+  root.addEventListener(&#x27;click&#x27;, event =&gt; {
+    const button = event.target.closest(&#x27;[data-step]&#x27;);
+    if (button) selectStep(button.dataset.step);
+  });
+  selectStep(&#x27;welcome&#x27;);
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

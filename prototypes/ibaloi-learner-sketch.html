@@ -1,0 +1,218 @@
+<div id="ibaloiLearnerSketch">
+  <style>
+    #ibaloiLearnerSketch {
+      color-scheme: light dark;
+      --ils-ink: light-dark(#242424, #f1f1ed);
+      --ils-muted: light-dark(#696969, #b7b7b0);
+      --ils-paper: light-dark(#fffefa, #1e1f1e);
+      --ils-board: light-dark(#f3f0e9, #151615);
+      --ils-line: light-dark(#b7b2a7, #65635d);
+      --ils-pencil: light-dark(#4b4a46, #d9d8d1);
+      --ils-accent: light-dark(#3d5f9f, #a9c2ff);
+      --ils-note: light-dark(#fff8d8, #484127);
+      --ils-note-ink: light-dark(#665d2c, #f2df8f);
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 22px;
+      color: var(--ils-ink);
+      background-color: var(--ils-board);
+      background-image: radial-gradient(color-mix(in srgb, var(--ils-line) 28%, transparent) .6px, transparent .6px);
+      background-size: 9px 9px;
+      border-radius: 10px;
+      font-family: "Comic Sans MS", "Bradley Hand", "Segoe Print", ui-rounded, system-ui, sans-serif;
+      box-sizing: border-box;
+    }
+    #ibaloiLearnerSketch * { box-sizing: border-box; }
+    #ibaloiLearnerSketch button { font: inherit; }
+    .ils-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; padding:0 6px 18px; }
+    .ils-heading h1 { max-width:690px; margin:0; font-size:clamp(24px, 3vw, 38px); line-height:1.05; letter-spacing:-.04em; transform:rotate(-.35deg); }
+    .ils-heading p { max-width:700px; margin:9px 0 0; color:var(--ils-muted); font-size:12px; line-height:1.45; }
+    .ils-label { margin:0 0 6px; color:var(--ils-accent); font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .ils-stamp { flex:0 0 auto; padding:9px 11px; border:2px solid var(--ils-pencil); border-radius:3px 8px 4px 6px; color:var(--ils-pencil); font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:10px; font-weight:700; transform:rotate(2deg); }
+    .ils-caption { margin:0 6px 13px; color:var(--ils-muted); font-size:10px; }
+    .ils-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(250px,.36fr); gap:17px; align-items:start; }
+    .ils-canvas { min-width:0; padding:17px; border:2px solid var(--ils-pencil); border-radius:4px 9px 5px 7px; background:color-mix(in srgb, var(--ils-paper) 84%, transparent); box-shadow:3px 3px 0 color-mix(in srgb, var(--ils-pencil) 34%, transparent); transform:rotate(.12deg); }
+    .ils-canvashead { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:0 1px 14px; }
+    .ils-canvashead h2 { margin:0; font-size:16px; letter-spacing:-.03em; }
+    .ils-canvashead span { color:var(--ils-muted); font-size:10px; }
+    .ils-phase { padding:12px 0 15px; border-top:2px dashed color-mix(in srgb, var(--ils-line) 80%, transparent); }
+    .ils-phase:first-of-type { padding-top:0; border-top:0; }
+    .ils-phasehead { display:flex; flex-wrap:wrap; align-items:baseline; gap:7px; margin-bottom:10px; }
+    .ils-phasehead strong { font-size:12px; }
+    .ils-phasehead span { color:var(--ils-muted); font-size:10px; }
+    .ils-phase-num { color:var(--ils-accent); font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:10px; font-weight:700; }
+    .ils-row { display:flex; align-items:stretch; gap:8px; }
+    .ils-arrow { align-self:center; flex:0 0 auto; color:var(--ils-accent); font-size:21px; font-family:ui-monospace, SFMono-Regular, Menlo, monospace; transform:rotate(-2deg); }
+    .ils-wire { position:relative; flex:1 1 0; min-width:0; padding:0; border:2px solid var(--ils-pencil); border-radius:4px 7px 3px 8px; background:var(--ils-paper); color:var(--ils-ink); text-align:left; cursor:pointer; overflow:hidden; transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+    .ils-wire:nth-child(even) { transform:rotate(.32deg); }
+    .ils-wire:nth-child(odd) { transform:rotate(-.24deg); }
+    .ils-wire:hover, .ils-wire:focus-visible { border-color:var(--ils-accent); box-shadow:3px 3px 0 color-mix(in srgb, var(--ils-accent) 32%, transparent); transform:translateY(-2px) rotate(-.2deg); }
+    .ils-wire.is-selected { border:3px solid var(--ils-accent); box-shadow:4px 4px 0 color-mix(in srgb, var(--ils-accent) 24%, transparent); }
+    .ils-screenbar { display:flex; justify-content:space-between; padding:7px 9px 5px; border-bottom:1px solid var(--ils-line); color:var(--ils-muted); font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:8px; }
+    .ils-screenbody { padding:8px 10px 11px; min-height:153px; }
+    .ils-brandline { display:flex; align-items:center; gap:5px; font-size:9px; font-weight:700; }
+    .ils-mark { width:15px; height:15px; display:grid; place-items:center; border:1.5px solid var(--ils-pencil); border-radius:50%; font-size:8px; }
+    .ils-headline { margin:13px 0 0; font-size:16px; line-height:1.03; letter-spacing:-.04em; }
+    .ils-line { height:7px; width:92%; margin-top:8px; border-bottom:1.5px solid var(--ils-pencil); transform:rotate(-.5deg); }
+    .ils-line.short { width:58%; }
+    .ils-box { margin-top:9px; padding:7px; border:1.5px solid var(--ils-pencil); border-radius:3px 5px 2px 4px; font-size:9px; line-height:1.25; }
+    .ils-box.dashed { border-style:dashed; }
+    .ils-chiprow { display:flex; flex-wrap:wrap; gap:4px; margin-top:10px; }
+    .ils-chip { padding:3px 6px; border:1px solid var(--ils-pencil); border-radius:999px; color:var(--ils-pencil); font-size:8px; }
+    .ils-button { display:block; width:100%; margin-top:10px; padding:6px; border:1.5px solid var(--ils-pencil); border-radius:3px 5px 4px 2px; background:var(--ils-ink); color:var(--ils-paper); font-size:9px; font-weight:700; text-align:center; }
+    .ils-button.light { background:transparent; color:var(--ils-ink); }
+    .ils-word { margin-top:9px; color:var(--ils-accent); font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:15px; font-weight:700; }
+    .ils-note { display:inline-block; margin-top:8px; padding:4px 6px; background:var(--ils-note); color:var(--ils-note-ink); font-size:8px; transform:rotate(-1.2deg); }
+    .ils-branch { display:grid; grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr); gap:8px; align-items:center; }
+    .ils-brancharrow { color:var(--ils-accent); font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:20px; text-align:center; transform:rotate(-22deg); }
+    .ils-branchhint { margin:8px 0 0; color:var(--ils-muted); font-size:9px; text-align:center; }
+    .ils-notes { padding:16px; border:2px solid var(--ils-pencil); border-radius:8px 3px 7px 4px; background:var(--ils-note); color:var(--ils-note-ink); box-shadow:3px 3px 0 color-mix(in srgb, var(--ils-pencil) 28%, transparent); transform:rotate(-.45deg); }
+    .ils-notes h2 { margin:0; font-size:17px; letter-spacing:-.04em; }
+    .ils-notes p { margin:6px 0 0; font-size:10px; line-height:1.4; }
+    .ils-list { display:grid; gap:11px; margin:15px 0 0; }
+    .ils-listitem { display:grid; grid-template-columns:24px 1fr; gap:7px; align-items:start; }
+    .ils-listitem b { display:grid; place-items:center; width:21px; height:21px; border:1.5px solid var(--ils-note-ink); border-radius:50%; font-size:9px; }
+    .ils-listitem span { font-size:10px; line-height:1.35; }
+    .ils-scribble { margin-top:15px; padding-top:11px; border-top:1px dashed var(--ils-note-ink); font-size:10px; line-height:1.4; }
+    .ils-foot { margin:14px 5px 0; color:var(--ils-muted); font-size:10px; line-height:1.4; }
+    .ils-foot strong { color:var(--ils-ink); }
+    @media (max-width:920px) {
+      #ibaloiLearnerSketch { padding:15px; }
+      .ils-heading { flex-direction:column; }
+      .ils-layout { grid-template-columns:1fr; }
+      .ils-notes { transform:rotate(.2deg); }
+    }
+    @media (max-width:560px) {
+      .ils-row, .ils-branch { display:grid; grid-template-columns:1fr; }
+      .ils-arrow, .ils-brancharrow { justify-self:center; transform:rotate(90deg); }
+      .ils-screenbody { min-height:136px; }
+    }
+  </style>
+
+  <header class="ils-heading">
+    <div>
+      <p class="ils-label">Low-fidelity wireframe · learner POV</p>
+      <h1>Sketch the learning journey before styling the app.</h1>
+      <p>Boxes show screen intent, not final interface design. The learner moves from trust and context to a small practice loop, then chooses how to use the language.</p>
+    </div>
+    <span class="ils-stamp">MVP · DRAFT 01</span>
+  </header>
+  <p class="ils-caption">Click any screen to read the learner action, system response, and research boundary.</p>
+
+  <main class="ils-layout">
+    <section class="ils-canvas" aria-label="Learner sketch wireframe flow">
+      <div class="ils-canvashead"><h2>Learner flow map</h2><span>Core path + optional routes</span></div>
+
+      <div class="ils-phase">
+        <div class="ils-phasehead"><span class="ils-phase-num">01</span><strong>Begin with trust</strong><span>Consent before content</span></div>
+        <div class="ils-row">
+          <button class="ils-wire is-selected" type="button" data-step="welcome" aria-pressed="true">
+            <div class="ils-screenbar"><span>SCREEN 01</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">ᐱ</span>Ibaloi / Ainu</div><div class="ils-headline">Start with a word.</div><div class="ils-line"></div><div class="ils-box dashed">Community permission, language scope, and learner choice.</div><div class="ils-button">Continue as learner</div></div>
+          </button>
+          <span class="ils-arrow" aria-hidden="true">→</span>
+          <button class="ils-wire" type="button" data-step="context" aria-pressed="false">
+            <div class="ils-screenbar"><span>SCREEN 02</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">ᐱ</span>Set my path</div><div class="ils-headline">Why are you learning?</div><div class="ils-chiprow"><span class="ils-chip">Family</span><span class="ils-chip">Community</span><span class="ils-chip">Study</span></div><div class="ils-line short"></div><div class="ils-note">Purpose + locality</div><div class="ils-button">Set my path</div></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="ils-phase">
+        <div class="ils-phasehead"><span class="ils-phase-num">02</span><strong>Practice one small loop</strong><span>Repeatable, not competitive</span></div>
+        <div class="ils-row">
+          <button class="ils-wire" type="button" data-step="today" aria-pressed="false">
+            <div class="ils-screenbar"><span>SCREEN 03</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">ᐱ</span>Today’s path</div><div class="ils-note">Practice rhythm · 3 days</div><div class="ils-headline">One phrase. One connection.</div><div class="ils-chiprow"><span class="ils-chip">3 words</span><span class="ils-chip">1 situation</span><span class="ils-chip">1 story</span></div><div class="ils-button">Start small</div></div>
+          </button>
+          <span class="ils-arrow" aria-hidden="true">→</span>
+          <button class="ils-wire" type="button" data-step="garden" aria-pressed="false">
+            <div class="ils-screenbar"><span>SCREEN 04</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">Aa</span>Word Garden</div><div class="ils-word">eguatan</div><div class="ils-minitext">understand / know · Verb</div><div class="ils-box">Source: guidebook<br>Guidebook draft · review needed</div><div class="ils-button light">Reveal meaning</div></div>
+          </button>
+          <span class="ils-arrow" aria-hidden="true">→</span>
+          <button class="ils-wire" type="button" data-step="practice" aria-pressed="false">
+            <div class="ils-screenbar"><span>SCREEN 05</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">◉</span>Practice</div><div class="ils-headline">Hear → choose → say</div><div class="ils-chiprow"><span class="ils-chip">Listen</span><span class="ils-chip">Recall</span><span class="ils-chip">Speak</span></div><div class="ils-line"></div><div class="ils-button">Try the word</div></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="ils-phase">
+        <div class="ils-phasehead"><span class="ils-phase-num">03</span><strong>Choose how to use it</strong><span>Branch when context matters</span></div>
+        <div class="ils-branch">
+          <button class="ils-wire" type="button" data-step="ask" aria-pressed="false">
+            <div class="ils-screenbar"><span>SCREEN 06</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">⌕</span>Ask Ibaloi</div><div class="ils-box">“How do I greet an elder?”</div><div class="ils-chiprow"><span class="ils-chip">Validated</span><span class="ils-chip">Variation</span><span class="ils-chip">Mentor</span></div><div class="ils-button light">Trace source</div></div>
+          </button>
+          <span class="ils-brancharrow" aria-hidden="true">↗</span>
+          <button class="ils-wire" type="button" data-step="story" aria-pressed="false">
+            <div class="ils-screenbar"><span>SCREEN 07</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">◒</span>Story / place</div><div class="ils-word">istoria</div><div class="ils-box">[story image / audio placeholder]</div><div class="ils-chiprow"><span class="ils-chip">iteneng · Listen</span><span class="ils-chip">Permission</span></div><div class="ils-button">Enter story</div></div>
+          </button>
+        </div>
+        <p class="ils-branchhint">Either route returns the learner to reflection. Sensitive material is never unlocked through points.</p>
+      </div>
+
+      <div class="ils-phase">
+        <div class="ils-phasehead"><span class="ils-phase-num">04</span><strong>Reflect and continue</strong><span>Practice, confidence, and connection</span></div>
+        <div class="ils-row">
+          <button class="ils-wire" type="button" data-step="reflect" aria-pressed="false">
+            <div class="ils-screenbar"><span>SCREEN 08</span><span>□ □ □</span></div>
+            <div class="ils-screenbody"><div class="ils-brandline"><span class="ils-mark">♡</span>Reflect</div><div class="ils-headline">What felt easy?</div><div class="ils-line"></div><div class="ils-line short"></div><div class="ils-chiprow"><span class="ils-chip">Save phrase</span><span class="ils-chip">Try again</span><span class="ils-chip">Ask mentor</span></div><div class="ils-button">Choose next step</div></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="ils-notes" aria-live="polite">
+      <h2 id="ilsDetailTitle">Welcome / consent</h2>
+      <p id="ilsDetailSubtitle">Trust comes before practice.</p>
+      <div class="ils-list" id="ilsDetailList">
+        <div class="ils-listitem"><b>1</b><span><strong>Learner:</strong> chooses whether to continue independently or ask for a human guide.</span></div>
+        <div class="ils-listitem"><b>2</b><span><strong>System:</strong> explains language scope, community authority, and permission boundaries.</span></div>
+        <div class="ils-listitem"><b>3</b><span><strong>Next:</strong> choose a learning purpose and context.</span></div>
+      </div>
+      <div class="ils-scribble"><strong>Sketch question:</strong><br>What must the learner understand before they see their first word?</div>
+    </aside>
+  </main>
+  <p class="ils-foot"><strong>Learner POV only.</strong> Mentor and researcher wireframes can be mapped separately once this core journey feels right.</p>
+</div>
+
+<script>
+(() => {
+  const root = document.getElementById('ibaloiLearnerSketch');
+  if (!root) return;
+  const data = {
+    welcome: {title:'Welcome / consent', subtitle:'Trust comes before practice.', items:['Learner: chooses whether to continue independently or ask for a human guide.','System: explains language scope, community authority, and permission boundaries.','Next: choose a learning purpose and context.'], question:'What must the learner understand before they see their first word?'},
+    context: {title:'Purpose and context', subtitle:'The path follows a situation, not an identity score.', items:['Learner: selects why they want to learn and the setting or locality when appropriate.','System: uses context to shape examples and practice situations.','Next: open a small daily route.'], question:'Which contexts should be available in the first learner test?'},
+    today: {title:'Today’s path', subtitle:'One small practice rhythm.', items:['Learner: chooses words, a situation, or an approved story.','System: offers one clear next action without XP or public ranking.','Next: enter Word Garden or another practice route.'], question:'What can a learner finish in three minutes and still feel useful?'},
+    garden: {title:'Word Garden', subtitle:'Vocabulary stays attached to evidence.', items:['Learner: taps a word, reveals the English gloss, hears it, and saves it.','System: shows part of speech, source, locality when known, permission, and review status.','Next: practice the word in a situation.'], question:'Which word records are safe enough to show in the first MVP?'},
+    practice: {title:'Practice loop', subtitle:'Hear → understand → use → reflect.', items:['Learner: listens, recalls, says the word, and tries again with an explanation.','System: gives a grounded correction and makes uncertainty visible.','Next: ask a question, enter a story, or reflect.'], question:'Where should the learner hear a human recording instead of an automated voice?'},
+    ask: {title:'Ask Ibaloi', subtitle:'A question can end in evidence or human help.', items:['Learner: asks about a phrase, relationship, place, or situation.','System: shows validated examples, variation, source trace, or a mentor route.','Next: use the example, compare a variation, or request help.'], question:'What wording should appear when the app does not know enough to answer?'},
+    story: {title:'Story / place', subtitle:'Language is encountered with people and place.', items:['Learner: listens to an approved story and responds in English or Ibaloi.','System: shows permission, locality, contributor credit, and transcript controls.','Next: reflect, save language practice, or ask for context.'], question:'Which story permissions must be visible before playback?'},
+    reflect: {title:'Reflect and continue', subtitle:'Progress includes confidence and connection.', items:['Learner: records what felt easy, difficult, useful, or worth revisiting.','System: offers retry, save, mentor support, and a next small step.','Next: continue the rhythm or return to a word.'], question:'Which reflection prompt feels natural rather than like a survey?'}
+  };
+  const title = root.querySelector('#ilsDetailTitle');
+  const subtitle = root.querySelector('#ilsDetailSubtitle');
+  const list = root.querySelector('#ilsDetailList');
+  const scribble = root.querySelector('.ils-scribble');
+  function selectStep(name) {
+    const item = data[name] || data.welcome;
+    root.querySelectorAll('[data-step]').forEach(button => {
+      const selected = button.dataset.step === name;
+      button.classList.toggle('is-selected', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+    title.textContent = item.title;
+    subtitle.textContent = item.subtitle;
+    list.innerHTML = item.items.map((text, index) => '<div class="ils-listitem"><b>'+(index + 1)+'</b><span>'+text+'</span></div>').join('');
+    scribble.innerHTML = '<strong>Sketch question:</strong><br>'+item.question;
+  }
+  root.addEventListener('click', event => {
+    const button = event.target.closest('[data-step]');
+    if (button) selectStep(button.dataset.step);
+  });
+  selectStep('welcome');
+})();
+</script>

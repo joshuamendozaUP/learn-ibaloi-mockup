@@ -1,0 +1,233 @@
+<div id="ibaloiLearnerFlow">
+  <style>
+    #ibaloiLearnerFlow {
+      color-scheme: light dark;
+      --ilf-ink: light-dark(#1f2940, #f3f6ff);
+      --ilf-muted: light-dark(#66718b, #aeb9d1);
+      --ilf-blue: light-dark(#5f7fe8, #8da5ff);
+      --ilf-blue-deep: light-dark(#3c5fcd, #b9c7ff);
+      --ilf-lilac: light-dark(#9f8fe8, #b6a9ff);
+      --ilf-coral: light-dark(#ef9b8d, #ffb2a4);
+      --ilf-mint: light-dark(#d9f0e8, #224b45);
+      --ilf-paper: light-dark(#fffdfb, #1b2234);
+      --ilf-line: light-dark(#d9e0ed, #39445e);
+      --ilf-bg: light-dark(#eef3f9, #111729);
+      --ilf-soft: light-dark(#f7f9fe, #202943);
+      --ilf-warn: light-dark(#fff3df, #4a3820);
+      --ilf-warn-ink: light-dark(#8e6526, #ffd993);
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 20px;
+      background: radial-gradient(circle at 7% 0%, color-mix(in srgb, var(--ilf-lilac) 22%, transparent), transparent 34%), linear-gradient(135deg, var(--ilf-soft), var(--ilf-bg));
+      border-radius: 26px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      box-sizing: border-box;
+    }
+    #ibaloiLearnerFlow * { box-sizing: border-box; }
+    #ibaloiLearnerFlow button { font: inherit; }
+    .ilf-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding:4px 6px 18px; }
+    .ilf-kicker { margin:0 0 5px; color:var(--ilf-blue-deep); font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .ilf-head h1 { margin:0; color:var(--ilf-ink); font-size:clamp(23px,3.3vw,36px); line-height:1.05; letter-spacing:-.045em; }
+    .ilf-head p { max-width:690px; margin:9px 0 0; color:var(--ilf-muted); font-size:13px; line-height:1.45; }
+    .ilf-flowbadge { flex:0 0 auto; border:1px solid color-mix(in srgb, var(--ilf-blue) 34%, var(--ilf-line)); border-radius:99px; padding:8px 11px; background:color-mix(in srgb, var(--ilf-blue) 10%, var(--ilf-paper)); color:var(--ilf-blue-deep); font-size:10px; font-weight:800; white-space:nowrap; }
+    .ilf-legend { display:flex; flex-wrap:wrap; gap:7px; align-items:center; margin:0 6px 16px; color:var(--ilf-muted); font-size:10px; }
+    .ilf-legend span { display:inline-flex; align-items:center; gap:5px; }
+    .ilf-legend i { width:8px; height:8px; display:inline-block; border-radius:50%; background:var(--ilf-blue); }
+    .ilf-legend i.branch { background:var(--ilf-coral); }
+    .ilf-legend i.review { background:var(--ilf-lilac); }
+    .ilf-board { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(270px,.8fr); gap:16px; align-items:start; }
+    .ilf-flowpanel { min-width:0; padding:15px; border:1px solid color-mix(in srgb, var(--ilf-line) 90%, transparent); border-radius:20px; background:color-mix(in srgb, var(--ilf-paper) 94%, transparent); }
+    .ilf-panelhead { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:0 0 12px; }
+    .ilf-panelhead h2 { margin:0; color:var(--ilf-ink); font-size:15px; letter-spacing:-.02em; }
+    .ilf-panelhead span { color:var(--ilf-muted); font-size:10px; }
+    .ilf-phase { position:relative; padding:13px 0 15px; border-top:1px solid color-mix(in srgb, var(--ilf-line) 72%, transparent); }
+    .ilf-phase:first-of-type { padding-top:3px; border-top:0; }
+    .ilf-phasehead { display:flex; align-items:center; gap:8px; margin-bottom:9px; }
+    .ilf-phasehead strong { color:var(--ilf-ink); font-size:11px; }
+    .ilf-phasehead span { color:var(--ilf-muted); font-size:9px; }
+    .ilf-phase-dot { width:20px; height:20px; display:grid; place-items:center; border-radius:7px; background:var(--ilf-blue); color:#fff; font-size:10px; font-weight:800; }
+    .ilf-phase-flow { display:flex; align-items:stretch; gap:7px; }
+    .ilf-arrow { flex:0 0 auto; align-self:center; color:var(--ilf-blue-deep); font-size:18px; font-weight:500; }
+    .ilf-screen { flex:1 1 0; min-width:0; padding:0; border:1px solid var(--ilf-line); border-radius:16px; background:var(--ilf-paper); color:var(--ilf-ink); text-align:left; cursor:pointer; overflow:hidden; transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+    .ilf-screen:hover, .ilf-screen:focus-visible { border-color:var(--ilf-blue); transform:translateY(-1px); box-shadow:0 7px 18px color-mix(in srgb, var(--ilf-blue) 18%, transparent); }
+    .ilf-screen.is-selected { border:2px solid var(--ilf-blue); background:color-mix(in srgb, var(--ilf-blue) 7%, var(--ilf-paper)); }
+    .ilf-minichrome { display:flex; justify-content:space-between; padding:8px 10px 5px; color:var(--ilf-muted); font-size:8px; font-weight:800; }
+    .ilf-minibody { padding:3px 10px 11px; }
+    .ilf-minibrand { display:flex; align-items:center; gap:5px; margin:0 0 9px; font-size:9px; font-weight:800; }
+    .ilf-mark { width:15px; height:15px; display:grid; place-items:center; border-radius:5px; background:linear-gradient(135deg,var(--ilf-blue),var(--ilf-lilac)); color:#fff; font-size:8px; }
+    .ilf-minipill { display:inline-flex; border-radius:99px; padding:3px 5px; background:color-mix(in srgb, var(--ilf-blue) 13%, var(--ilf-paper)); color:var(--ilf-blue-deep); font-size:7px; font-weight:800; }
+    .ilf-minititle { margin:7px 0 0; color:var(--ilf-ink); font-size:13px; font-weight:800; line-height:1.08; letter-spacing:-.03em; }
+    .ilf-minitext { margin:5px 0 0; color:var(--ilf-muted); font-size:8px; line-height:1.35; }
+    .ilf-miniline { height:7px; margin-top:6px; border-radius:4px; background:color-mix(in srgb, var(--ilf-line) 57%, transparent); }
+    .ilf-miniline.short { width:62%; }
+    .ilf-minichips { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+    .ilf-minichips span { border:1px solid var(--ilf-line); border-radius:99px; padding:3px 5px; color:var(--ilf-muted); font-size:7px; }
+    .ilf-miniaction { display:block; width:100%; margin-top:9px; border:0; border-radius:7px; padding:6px; background:var(--ilf-blue); color:#fff; font-size:8px; font-weight:800; text-align:center; }
+    .ilf-miniaction.ghost { border:1px solid var(--ilf-line); background:transparent; color:var(--ilf-blue-deep); }
+    .ilf-ibword { color:var(--ilf-blue-deep); font-size:10px; font-weight:800; }
+    .ilf-ibnote { margin-top:3px; color:var(--ilf-muted); font-size:7px; }
+    .ilf-branchrow { display:grid; grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr); gap:7px; align-items:center; }
+    .ilf-branchmark { display:grid; place-items:center; color:var(--ilf-coral); font-size:17px; }
+    .ilf-branchcaption { margin:8px 0 0; color:var(--ilf-muted); font-size:9px; text-align:center; }
+    .ilf-detail { position:sticky; top:12px; padding:16px; border:1px solid color-mix(in srgb, var(--ilf-line) 90%, transparent); border-radius:20px; background:var(--ilf-paper); }
+    .ilf-detailhead { display:flex; justify-content:space-between; align-items:flex-start; gap:9px; padding-bottom:12px; border-bottom:1px solid var(--ilf-line); }
+    .ilf-detailhead h2 { margin:0; color:var(--ilf-ink); font-size:17px; line-height:1.1; letter-spacing:-.03em; }
+    .ilf-detailhead p { margin:4px 0 0; color:var(--ilf-muted); font-size:10px; line-height:1.35; }
+    .ilf-stepbadge { flex:0 0 auto; border-radius:99px; padding:5px 7px; background:var(--ilf-warn); color:var(--ilf-warn-ink); font-size:9px; font-weight:800; }
+    .ilf-detailgrid { display:grid; gap:10px; margin-top:13px; }
+    .ilf-detailitem { padding-bottom:9px; border-bottom:1px solid color-mix(in srgb, var(--ilf-line) 65%, transparent); }
+    .ilf-detailitem:last-child { padding-bottom:0; border-bottom:0; }
+    .ilf-detailitem label { display:block; margin-bottom:4px; color:var(--ilf-muted); font-size:8px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+    .ilf-detailitem div { color:var(--ilf-ink); font-size:11px; line-height:1.42; }
+    .ilf-detailitem .ilf-mutedcopy { color:var(--ilf-muted); }
+    .ilf-callout { margin-top:13px; padding:10px 11px; border-radius:12px; background:color-mix(in srgb, var(--ilf-mint) 52%, var(--ilf-paper)); color:var(--ilf-ink); font-size:10px; line-height:1.4; }
+    .ilf-foot { margin:15px 5px 0; color:var(--ilf-muted); font-size:10px; line-height:1.4; }
+    .ilf-foot strong { color:var(--ilf-ink); }
+    @media (max-width: 920px) {
+      #ibaloiLearnerFlow { padding:14px; border-radius:18px; }
+      .ilf-head { flex-direction:column; }
+      .ilf-flowbadge { align-self:flex-start; }
+      .ilf-board { grid-template-columns:1fr; }
+      .ilf-detail { position:static; }
+    }
+    @media (max-width: 560px) {
+      .ilf-phase-flow, .ilf-branchrow { grid-template-columns:1fr; display:grid; }
+      .ilf-arrow { justify-self:center; transform:rotate(90deg); }
+      .ilf-branchmark { transform:rotate(90deg); }
+      .ilf-screen { min-height:142px; }
+    }
+  </style>
+
+  <header class="ilf-head">
+    <div>
+      <p class="ilf-kicker">Wireframe flow · learner point of view</p>
+      <h1>From first greeting to first conversation.</h1>
+      <p>A focused MVP journey for learning Ibaloi through short practice, trusted records, meaningful situations, and a safe path to human help.</p>
+    </div>
+    <span class="ilf-flowbadge">8 screens · 1 core loop · 2 optional routes</span>
+  </header>
+
+  <div class="ilf-legend" aria-label="Flow legend">
+    <span><i></i>Core learner path</span><span><i class="branch"></i>Optional route</span><span><i class="review"></i>Community review / source status</span>
+  </div>
+
+  <main class="ilf-board">
+    <section class="ilf-flowpanel" aria-label="Learner flow wireframes">
+      <div class="ilf-panelhead"><h2>Learner flow</h2><span>Select a screen to inspect its behavior</span></div>
+
+      <div class="ilf-phase">
+        <div class="ilf-phasehead"><span class="ilf-phase-dot">1</span><strong>Begin with trust</strong><span>Before any lesson or score</span></div>
+        <div class="ilf-phase-flow">
+          <button class="ilf-screen is-selected" type="button" data-step="welcome" aria-pressed="true">
+            <div class="ilf-minichrome"><span>9:41</span><span>1 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">ᐱ</span>Ibaloi / Ainu</div><span class="ilf-minipill">Community-governed</span><div class="ilf-minititle">Start with a word.</div><div class="ilf-minitext">Language, stories, and permissions are introduced first.</div><div class="ilf-miniaction">Continue as learner</div></div>
+          </button>
+          <span class="ilf-arrow" aria-hidden="true">→</span>
+          <button class="ilf-screen" type="button" data-step="context" aria-pressed="false">
+            <div class="ilf-minichrome"><span>9:41</span><span>2 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">ᐱ</span>Set my path</div><div class="ilf-minititle">What brings you here?</div><div class="ilf-minichips"><span>Family</span><span>Community</span><span>Study</span></div><div class="ilf-miniline"></div><div class="ilf-minitext">Purpose and locality shape examples—not identity scores.</div><div class="ilf-miniaction">Set my path</div></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="ilf-phase">
+        <div class="ilf-phasehead"><span class="ilf-phase-dot">2</span><strong>Build a small practice rhythm</strong><span>One repeatable loop, not a leaderboard</span></div>
+        <div class="ilf-phase-flow">
+          <button class="ilf-screen" type="button" data-step="today" aria-pressed="false">
+            <div class="ilf-minichrome"><span>9:41</span><span>3 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">ᐱ</span>Today’s path</div><span class="ilf-minipill">Practice rhythm · 3 days</span><div class="ilf-minititle">One phrase. One connection.</div><div class="ilf-minichips"><span>3 words</span><span>1 situation</span><span>1 story</span></div><div class="ilf-miniaction">Start small</div></div>
+          </button>
+          <span class="ilf-arrow" aria-hidden="true">→</span>
+          <button class="ilf-screen" type="button" data-step="garden" aria-pressed="false">
+            <div class="ilf-minichrome"><span>9:41</span><span>4 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">Aa</span>Word Garden</div><div class="ilf-ibword">eguatan</div><div class="ilf-minitext">understand / know · Verb</div><div class="ilf-minichips"><span>Guidebook draft</span><span>Review needed</span></div><div class="ilf-miniline"></div><div class="ilf-miniaction ghost">Reveal meaning</div></div>
+          </button>
+          <span class="ilf-arrow" aria-hidden="true">→</span>
+          <button class="ilf-screen" type="button" data-step="practice" aria-pressed="false">
+            <div class="ilf-minichrome"><span>9:41</span><span>5 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">◉</span>Practice</div><div class="ilf-minititle">Hear → choose → say</div><div class="ilf-minitext">Try one word in a situation. Explain the correction.</div><div class="ilf-minichips"><span>Listen</span><span>Recall</span><span>Speak</span></div><div class="ilf-miniaction">Try the word</div></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="ilf-phase">
+        <div class="ilf-phasehead"><span class="ilf-phase-dot">3</span><strong>Use language in the world</strong><span>Choose the route that fits the learner’s need</span></div>
+        <div class="ilf-branchrow">
+          <button class="ilf-screen" type="button" data-step="ask" aria-pressed="false">
+            <div class="ilf-minichrome"><span>9:41</span><span>6 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">⌕</span>Ask Ibaloi</div><div class="ilf-minitext">“How do I greet an elder?”</div><div class="ilf-minichips"><span>Validated</span><span>Variation</span><span>Mentor</span></div><div class="ilf-miniaction ghost">Trace the source</div></div>
+          </button>
+          <div class="ilf-branchmark" aria-hidden="true">↗</div>
+          <button class="ilf-screen" type="button" data-step="story" aria-pressed="false">
+            <div class="ilf-minichrome"><span>9:41</span><span>7 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">◒</span>Story / place</div><div class="ilf-ibword">istoria</div><div class="ilf-minitext">Community-approved story · Upper Loakan</div><div class="ilf-minichips"><span>iteneng · Listen</span><span>Permission shown</span></div><div class="ilf-miniaction">Enter story</div></div>
+          </button>
+        </div>
+        <div class="ilf-branchcaption">The learner may ask for clarification or enter an approved story; both routes return to reflection.</div>
+      </div>
+
+      <div class="ilf-phase">
+        <div class="ilf-phasehead"><span class="ilf-phase-dot">4</span><strong>Reflect and continue</strong><span>Progress is practice, confidence, and connection</span></div>
+        <div class="ilf-phase-flow">
+          <button class="ilf-screen" type="button" data-step="reflect" aria-pressed="false">
+            <div class="ilf-minichrome"><span>9:41</span><span>8 / 8</span></div>
+            <div class="ilf-minibody"><div class="ilf-minibrand"><span class="ilf-mark">♡</span>Reflect</div><div class="ilf-minititle">What felt easy?</div><div class="ilf-minichips"><span>Save phrase</span><span>Try again</span></div><div class="ilf-minitext">Private unless the learner consents to share for the study.</div><div class="ilf-miniaction">Choose next step</div></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="ilf-detail" aria-live="polite">
+      <div class="ilf-detailhead"><div><h2 id="ilfDetailTitle">Welcome / consent</h2><p id="ilfDetailSubtitle">Trust comes before practice.</p></div><span class="ilf-stepbadge" id="ilfDetailStep">01</span></div>
+      <div class="ilf-detailgrid" id="ilfDetailGrid">
+        <div class="ilf-detailitem"><label>Learner action</label><div>Choose whether to continue independently or ask for a human guide.</div></div>
+        <div class="ilf-detailitem"><label>System response</label><div>Explain language scope, community authority, permissions, and what the app can—and cannot—answer.</div></div>
+        <div class="ilf-detailitem"><label>Decision point</label><div class="ilf-mutedcopy">Continue as learner → choose a purpose and context.</div></div>
+        <div class="ilf-detailitem"><label>Design boundary</label><div class="ilf-mutedcopy">No universal greeting is implied. Guidebook draft wording stays marked for community review.</div></div>
+      </div>
+      <div class="ilf-callout" id="ilfDetailCallout"><strong>Why this is different:</strong> the first screen establishes a relationship with the language community, not a game score.</div>
+    </aside>
+  </main>
+
+  <p class="ilf-foot"><strong>Learner POV only.</strong> Mentor and researcher flows can be designed next as separate wireframe maps, while this flow shows where the learner can ask for support and where consent is revisited.</p>
+</div>
+
+<script>
+(() => {
+  const root = document.getElementById('ibaloiLearnerFlow');
+  if (!root) return;
+  const steps = {
+    welcome: {step:'01', title:'Welcome / consent', subtitle:'Trust comes before practice.', action:'Choose whether to continue independently or ask for a human guide.', response:'Explain language scope, community authority, permissions, and what the app can—and cannot—answer.', decision:'Continue as learner → choose a purpose and context.', boundary:'No universal greeting is implied. Guidebook draft wording stays marked for community review.', callout:'the first screen establishes a relationship with the language community, not a game score.'},
+    context: {step:'02', title:'Purpose and context', subtitle:'The learner chooses a situation, not an identity label.', action:'Select why they want to learn and, when appropriate, the setting or locality.', response:'Shape examples, vocabulary, and practice situations without treating one variety as universal.', decision:'Set my path → see a small daily route.', boundary:'Purpose and locality are learning context; they are not used to score cultural belonging.', callout:'the learner’s reason for learning drives the path more than a generic level number.'},
+    today: {step:'03', title:'Today’s path', subtitle:'One small practice rhythm.', action:'Choose one short route: words, a situation, or an approved story.', response:'Offer a clear next step and show practice rhythm instead of XP or a public ranking.', decision:'Start small → Word Garden, practice, or an optional question.', boundary:'Missing a day never erases progress; the rhythm is encouragement, not pressure.', callout:'the home screen is a calm launch point, not a dashboard full of scores.'},
+    garden: {step:'04', title:'Word Garden', subtitle:'Vocabulary stays attached to evidence.', action:'Tap a word, reveal its meaning, hear it, and save it for review.', response:'Show part of speech, English gloss, source, locality when known, permission, and review status.', decision:'Practice the word → move into a situation-based activity.', boundary:'Draft translations are not presented as final or universal forms.', callout:'a vocabulary section becomes a provenance-aware memory space—not a list of decontextualized points.'},
+    practice: {step:'05', title:'Practice loop', subtitle:'Hear → understand → use → reflect.', action:'Listen, recall, arrange or choose, say the word, and try again with an explanation.', response:'Give a grounded correction and make uncertainty visible; avoid punitive hearts or accent scores.', decision:'Try again, save the phrase, ask a question, or choose a story.', boundary:'Automated feedback supports practice but does not decide cultural correctness.', callout:'familiar micro-lessons are useful here, but the goal is confident use in context.'},
+    ask: {step:'06', title:'Ask Ibaloi', subtitle:'A question can end in evidence or human help.', action:'Ask about a phrase, relationship, place, or situation.', response:'Show validated examples, possible local variation, source trace, and a route to a representative when evidence is insufficient.', decision:'Use the example, compare a variation, or ask a mentor.', boundary:'The app can refuse to guess and never silently standardizes a locality.', callout:'uncertainty is a visible learning state, not a failure message.'},
+    story: {step:'07', title:'Story / place', subtitle:'Language is encountered with people and place.', action:'Listen to an approved story, view its context, and respond in English or Ibaloi.', response:'Show permission level, locality, contributor credit, transcript, and listening controls.', decision:'Reflect on the story → save language practice or ask for context.', boundary:'Sensitive stories are not unlocked through points; access follows community permission.', callout:'stories provide meaning and belonging without asking the learner to perform cultural expertise.'},
+    reflect: {step:'08', title:'Reflect and continue', subtitle:'Progress includes confidence and connection.', action:'Record what felt easy, difficult, useful, or worth revisiting.', response:'Offer retry, save, mentor support, and a next small step; share research data only with consent.', decision:'Continue the rhythm, revisit a word, or request human help.', boundary:'Language performance is measured separately from belonging, connection, confidence, and willingness to use Ibaloi.', callout:'reflection closes the loop and gives the learner agency over what happens next.'}
+  };
+  const title = root.querySelector('#ilfDetailTitle');
+  const subtitle = root.querySelector('#ilfDetailSubtitle');
+  const badge = root.querySelector('#ilfDetailStep');
+  const grid = root.querySelector('#ilfDetailGrid');
+  const callout = root.querySelector('#ilfDetailCallout');
+  function selectStep(name) {
+    const data = steps[name] || steps.welcome;
+    root.querySelectorAll('[data-step]').forEach(button => {
+      const selected = button.dataset.step === name;
+      button.classList.toggle('is-selected', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+    title.textContent = data.title;
+    subtitle.textContent = data.subtitle;
+    badge.textContent = data.step;
+    grid.innerHTML = '<div class="ilf-detailitem"><label>Learner action</label><div>'+data.action+'</div></div><div class="ilf-detailitem"><label>System response</label><div>'+data.response+'</div></div><div class="ilf-detailitem"><label>Decision point</label><div class="ilf-mutedcopy">'+data.decision+'</div></div><div class="ilf-detailitem"><label>Design boundary</label><div class="ilf-mutedcopy">'+data.boundary+'</div></div>';
+    callout.innerHTML = '<strong>Why this is different:</strong> '+data.callout;
+  }
+  root.addEventListener('click', event => {
+    const button = event.target.closest('[data-step]');
+    if (button) selectStep(button.dataset.step);
+  });
+  selectStep('welcome');
+})();
+</script>
